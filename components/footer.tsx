@@ -20,17 +20,17 @@ const Footer = () => {
             <h3 className="text-gray-800 font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-800 hover:text-white transition-colors">
+                <Link href="/" className="text-gray-800 hover:text-blue-400 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/#webinars" className="text-gray-800 hover:text-white transition-colors">
+                <Link href="/#webinars" className="text-gray-800 hover:text-blue-400 transition-colors">
                   Webinars
                 </Link>
               </li>
               <li>
-                <Link href="/#faq" className="text-gray-800 hover:text-white transition-colors">
+                <Link href="/#faq" className="text-gray-800 hover:text-blue-400 transition-colors">
                   FAQ
                 </Link>
               </li>
@@ -42,13 +42,13 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center text-gray-800">
                 <Mail className="h-5 w-5 mr-2" />
-                <a href="mailto:info@vitazan.com" className="hover:text-white transition-colors">
+                <a href="mailto:info@vitazan.com" className="hover:text-blue-400  transition-colors">
                   info@vitazan.com
                 </a>
               </li>
               <li className="flex items-center text-gray-800">
                 <Phone className="h-5 w-5 mr-2" />
-                <a href="tel:+18005000733" className="hover:text-white transition-colors">
+                <a href="tel:+18005000733" className="hover:text-blue-400  transition-colors">
                   1-888-863-9274
                 </a>
               </li>

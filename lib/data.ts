@@ -254,11 +254,11 @@ export const webinars: Webinar[] = [
     title: "Healing after Chemotherapy and Radiation",
     description:
       "This comprehensive webinar explores evidence-based nutritional approaches for cancer patients. Dr. Sarah Johnson will discuss anti-inflammatory diets, targeted supplementation, and nutritional strategies to mitigate treatment side effects. Learn how to integrate these approaches with conventional cancer treatments for optimal patient outcomes.",
-    shortDescription: "soon to be updated",
+    shortDescription: "TBD",
     date: "September 10, 2025 ",
     time: "1:00 PM – 2:00 PM  EST",
     speakerId: "dr-paul-a",
-    registrationLink: "https://attendee.gotowebinar.com/register/1817335938156515166",
+    registrationLink: "#",
     
   },
   {
@@ -276,23 +276,23 @@ export const webinars: Webinar[] = [
     id: "microbiome-cancer",
     title: "Prostate Cancer Update",
     description:
-      "Dr. Amara Patel explores the fascinating relationship between gut microbiota and cancer immunotherapy efficacy. This webinar covers cutting-edge research on microbiome modulation strategies, including dietary interventions, prebiotics, probiotics, and fecal microbiota transplantation. Learn how these approaches may enhance treatment outcomes and reduce adverse effects.",
-    shortDescription: "TBD",
+      "neil",
+    shortDescription: "Learn cutting-edge naturopathic strategies that go beyond conventional prostate cancer care",
     date: "December 10, 2025 ",
     time: "1:00 PM - 2:00 PM EST",
     speakerId: "dr-neil",
-    registrationLink: "#",
+    registrationLink: "https://register.gotowebinar.com/register/1817335938156515166",
   },
   {
     id: "mind-body-approaches",
     title: "Mapping the Future: Next-Gen Tools for Personalized Cancer Care",
     description:
-      "Mapping the Future: Next-Gen Tools for Personalized Cancer Care",
-    shortDescription: "TBD",
+      "Explore how advanced precision tools are reshaping oncology—from early detection to real-time surveillance and individualized treatment strategies.",
+    shortDescription: "Explore how advanced precision tools are reshaping oncology",
      date: "January 14, 2026 ",
     time: "1:00 PM - 2:00 PM EST",
     speakerId: "dr-eric",
-    registrationLink: "#",
+    registrationLink: "https://attendee.gotowebinar.com/register/6317651324404373085",
   },
   {
     id: "lifestyle-medicine",
@@ -309,7 +309,7 @@ export const webinars: Webinar[] = [
 
 export const faqs: FAQ[] = [
   {
-    question: ":How is this series distinct from other integrative medicine webinars?",
+    question: "How is this series distinct from other integrative medicine webinars?",
     answer:
       "This CE-based webinar series integrates core oncology concepts with practical clinical application. It reviews cancer pathophysiology—highlighting angiogenesis, immune function, and their relevance in integrative care—then applies this knowledge to common patient concerns around natural products and lifestyle choices during and after conventional treatment. It explores evidence-informed approaches  helping clinicians translate science into effective, patient-centered care.",
   },

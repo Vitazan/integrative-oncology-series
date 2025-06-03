@@ -230,12 +230,22 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { useState } from "react"
 
-export default function WebinarPage({ params }: { params: { id: string } }) {
-  const webinar = webinars.find((w) => w.id === params.id)
+// export default function WebinarPage({ params }: { params: { id: string } }) {
+//   const webinar = webinars.find((w) => w.id === params.id)
+//   if (!webinar) notFound()
+
+//   const speaker = getSpeakerByWebinarId(webinar.id)
+//   const [tab, setTab] = useState<"webinar" | "speaker">("webinar")
+
+//   return (
+import { use } from 'react'
+export default function WebinarPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
+  const webinar = webinars.find((w) => w.id === id)
+
   if (!webinar) notFound()
 
   const speaker = getSpeakerByWebinarId(webinar.id)
-  const [tab, setTab] = useState<"webinar" | "speaker">("webinar")
 
   return (
     <main className="min-h-screen">
@@ -256,7 +266,7 @@ export default function WebinarPage({ params }: { params: { id: string } }) {
       </section>
 
       {/* Tabs Navigation */}
-      <div className="container border-b border-gray-200 mt-6">
+      {/* <div className="container border-b border-gray-200 mt-6">
         <div className="flex justify-start space-x-6">
           <button
             onClick={() => setTab("webinar")}
@@ -275,11 +285,11 @@ export default function WebinarPage({ params }: { params: { id: string } }) {
             About the Speaker
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Tab Content Section */}
       <section className="container py-12">
-        {tab === "webinar" && (
+        {/* {tab === "webinar" && (
           <div>
             <h2 className="text-2xl font-bold mb-6 text-gray-800">What You’ll Learn</h2>
             <ul className="space-y-4 text-gray-600 mb-8">
@@ -299,9 +309,8 @@ export default function WebinarPage({ params }: { params: { id: string } }) {
               <Button size="lg" className="w-full bg-[#90b73e] hover:opacity-90 text-black">Register Free</Button>
             </div>
           </div>
-        )}
+        )} */}
 
-        {tab === "speaker" && speaker && (
   <section className="bg-white p-6 rounded-xl shadow-md">
     {/* <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">
       Meet the Speaker
@@ -309,33 +318,36 @@ export default function WebinarPage({ params }: { params: { id: string } }) {
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
       {/* Speaker Image */}
-      <div className="flex justify-center md:justify-start">
-        <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-emerald-100 shadow-md">
-          <img
-            src={speaker.image || "/placeholder.svg"}
-            alt={speaker.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
+      {speaker && (
+        <>
+          <div className="flex justify-center md:justify-start">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-emerald-100 shadow-md">
+              <img
+                src={speaker.image || "/placeholder.svg"}
+                alt={speaker.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
-      {/* Speaker Info */}
-      <div className="md:col-span-2">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-1">
-          {speaker.name}
-        </h3>
-        <p className="text-emerald-600 font-medium mb-3">{speaker.title}</p>
-       <div className="text-gray-700 leading-relaxed space-y-4">
-  <div
-    dangerouslySetInnerHTML={{ __html: speaker.biohtml }}
-    className="[&>a]:text-emerald-600 [&>a]:underline [&>strong]:font-semibold"
-  />
-</div>
-
-        </div>
+          {/* Speaker Info */}
+          <div className="md:col-span-2">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-1">
+              {speaker.name}
+            </h3>
+            <p className="text-emerald-600 font-medium mb-3">{speaker.title}</p>
+            <div className="text-gray-700 leading-relaxed space-y-4">
+              <div
+                dangerouslySetInnerHTML={{ __html: speaker.biohtml }}
+                className="[&>a]:text-emerald-600 [&>a]:underline [&>strong]:font-semibold"
+              />
+            </div>
+          </div>
+        </>
+      )}
     </div>
   </section>
-)}
+
 
       </section>
     </main>
