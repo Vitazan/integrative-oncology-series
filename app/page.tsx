@@ -75,6 +75,7 @@ export default function Home() {
                   <span className="font-semibold">Implement leading-edge strategies</span> for cancer prevention
                 </p>
               </li>
+              
               <li className="flex items-start">
                 <div className="mr-3 mt-1 bg-emerald-100 text-emerald-600 rounded-full p-1">
                   <svg
@@ -92,7 +93,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <p className="text-lg text-gray-600">
-                  <span className="font-semibold">Learn directly</span> from experts in integrative oncology
+                  <span className="font-semibold">Gain the knowledge to deliver </span> the most effective post-treatment strategies
                 </p>
               </li>
               <li className="flex items-start">
@@ -112,7 +113,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <p className="text-lg text-gray-600">
-                  <span className="font-semibold">Gain the knowledge to deliver </span> the most effective post-treatment strategies
+                  <span className="font-semibold">Learn directly</span> from experts in integrative oncology
                 </p>
               </li>
             </ul>
