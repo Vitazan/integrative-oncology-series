@@ -129,7 +129,10 @@ const HeroBanner = () => {
   transition={{ duration: 0.5, delay: 1 }}
 >
   <span className="font-medium">Sponsored by</span>
+  <a href="https://nfh.ca" target="_blank" rel="noopener noreferrer">
   <img src="/NFH x Vitazan.png" alt="NFH and Vitazan Logos" className="h-7 md:h-14 object-contain" />
+</a>
+
 </motion.div>
 
 

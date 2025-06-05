@@ -43,10 +43,10 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
+          <Link href="/" className="text-gray-700 hover:text-[#90b73e] font-medium transition-colors">
             Home
           </Link>
-          <Link href="/#faq" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
+          <Link href="/#faq" className="text-gray-700 hover:text-[#90b73e] font-medium transition-colors">
             FAQ
           </Link>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -97,28 +97,36 @@ const Header = () => {
           <div className="container py-4 flex flex-col space-y-4">
             <Link
               href="/"
-              className="text-gray-700 hover:text-emerald-600 font-medium py-2"
+              className="text-gray-700 hover:text-[#90b73e] font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
-            <Link
+            {/* <Link
               href="/#webinars"
               className="text-gray-700 hover:text-emerald-600 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Webinars
-            </Link>
+            </Link> */}
             <Link
               href="/faq"
-              className="text-gray-700 hover:text-emerald-600 font-medium py-2"
+              className="text-gray-700 hover:text-[#90b73e] font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
             </Link>
-            <Button className="bg-emerald-600 hover:bg-emerald-700 w-full" onClick={() => setIsMobileMenuOpen(false)}>
-              Register
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+           <Button
+            style={{ backgroundColor: "#90b73e" }}
+            className="hover:opacity-90 text-white"
+          >
+          <Link href="/#webinars" className="text-gray-700 hover:text-black font-medium transition-colors">
+                      Webinars
+                    </Link>
+          </Button>
+
+          </motion.div>
           </div>
         </motion.div>
       )}

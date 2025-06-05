@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <Link href="https://nfh.ca" className="inline-block mb-4">
+            <Link href="https://nfh.ca" className="inline-block mb-4" target="_blank" rel="noopener noreferrer">
               <img src="/NFH x Vitazan.png" alt="New Roots Herbal" className="h-14" />
             </Link>
             <p className="text-gray-800 mb-6 max-w-md">
@@ -44,6 +44,12 @@ const Footer = () => {
                 <Mail className="h-5 w-5 mr-2" />
                 <a href="mailto:info@vitazan.com" className="hover:text-blue-400  transition-colors">
                   info@vitazan.com
+                </a>
+              </li>
+              <li className="flex items-center text-gray-800">
+                <Mail className="h-5 w-5 mr-2" />
+                <a href="mailto:info@vitazan.com" className="hover:text-blue-400  transition-colors">
+                  info@nfh.com
                 </a>
               </li>
               <li className="flex items-center text-gray-800">
