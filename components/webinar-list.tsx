@@ -21,7 +21,7 @@ const WebinarList = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-gray-800">Schedule</h2>
           <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
             Join our expert naturopathic doctors from September 2025 to February 2026 for insightful discussions on integrative oncology
-            approaches. All webinars are completely free and open to everyone.
+            approaches.All webinars are free and open to integrative health care practitioners and students.
           </p>
         </motion.div>
 

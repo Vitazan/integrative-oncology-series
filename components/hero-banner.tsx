@@ -9,7 +9,7 @@ const RotatingText = () => {
   const phrases = [
     "Free webinar series open to everyone",
     "Advanced webinar series with CE credits",
-    "Designed for Naturopathic Doctors",
+    "Clinically focused webinars for Naturopathic Doctors",
    
   ]
 

@@ -95,6 +95,26 @@ export default function Home() {
                   <span className="font-semibold">Learn directly</span> from experts in integrative oncology
                 </p>
               </li>
+              <li className="flex items-start">
+                <div className="mr-3 mt-1 bg-emerald-100 text-emerald-600 rounded-full p-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <p className="text-lg text-gray-600">
+                  <span className="font-semibold">Gain the knowledge to deliver </span> the most effective post-treatment strategies
+                </p>
+              </li>
             </ul>
 
             <p className="text-lg text-gray-600 mb-8">

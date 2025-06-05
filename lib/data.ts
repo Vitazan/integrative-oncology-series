@@ -316,7 +316,7 @@ export const faqs: FAQ[] = [
   {
     question: "Even if I don’t see cancer patients, how could this series benefit my clinical approach?",
     answer:
-      "NDs and integrative practitioners in general practice aim to support the whole person, not just the diagnosis. This series focuses on helping patients with a cancer diagnosis optimize their overall health and well-being, rather than offering direct cancer treatment. Cancer patients often have distinct needs that require informed, compassionate care. This series is designed to make you an 'oncology-informed' provider. Our expert panel will address the most common questions that arise in primary care, equipping you with the knowledge and tools to confidently support your patients through every stage of their journey.",
+      "NDs and integrative practitioners in general practice aim to support the whole person, not just the diagnosis. This series focuses on helping patients with a cancer diagnosis optimize their overall health and well-being, rather than offering direct cancer treatment. Cancer patients often have distinct needs that require informed, compassionate care. This series is designed to provide you will tools and knowledge to become 'oncology-informed'. Our expert panel will address the most common questions that arise in primary care, equipping you with the knowledge and tools to confidently support your patients through every stage of their journey.",
   },
   {
     question: "Why have NFH and Vitazan chosen to spearhead this series?",
