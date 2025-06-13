@@ -51,10 +51,10 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    Dr. Anderson is co-author of the Hay House book 
-    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" text-blue-600 underline">“Outside the Box Cancer Therapies”</a> with Dr. Mark Stengler, and contributed to the anthology 
-    <a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class=" underline">“Success Breakthroughs”</a> with Jack Canfield, and 
-    <em>Cancer… The Journey from Diagnosis to Empowerment</em> by Lioncrest Publishing.
+    Dr. Anderson is co-author of the Hay House book <strong>
+    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" text-blue-600 underline">“Outside the Box Cancer Therapies”</a> </strong>with Dr. Mark Stengler, and contributed to the anthology 
+    <strong><a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class=" underline">“Success Breakthroughs”</a></strong> with Jack Canfield, and 
+    <strong>Cancer… The Journey from Diagnosis to Empowerment</strong> by Lioncrest Publishing.
   </p>
 
   <p>
@@ -63,8 +63,8 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    A frequent <strong>CME speaker and educator,</strong> Dr. Anderson has expanded his reach through his online CE platform 
-    <a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer"  className="text-[#97c851] underline">ConsultDrA.com</a> 
+    A frequent CME speaker and educator, Dr. Anderson has expanded his reach through his online CE platform 
+    <strong><a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer"  className="text-[#97c851] underline">ConsultDrA.com</a> </strong>
     and through his <strong>Advanced Applications in Medical Practice (AAMP)</strong> conferences, which deliver cutting-edge clinical education in a CME-accredited format.
   </p>
 `,
