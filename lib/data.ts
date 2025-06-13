@@ -169,24 +169,24 @@ export const speakers: Speaker[] = [
     bio: "Dr. Dugald Seely, ND, MSc. – Dr. Seely is a naturopathic doctor and clinician scientist, specializing in integrative cancer care. Dr. Seely blends evidence-based approaches in clinical practice and is active in the conduct of synthesis and clinical research ",
     biohtml: `
   <p>
-    <strong>Dr. Dugald Seely, ND, MSc</strong> is a naturopathic doctor and clinician scientist with a specialization in 
-    <strong>integrative cancer care</strong>. He is known for blending <strong>evidence-based medicine</strong> with 
+    Dr. Dugald Seely, ND, MSc is a naturopathic doctor and clinician scientist with a specialization in 
+    integrative cancer care. He is known for blending evidence-based medicine with 
     naturopathic principles, both in clinical settings and in the realm of research.
   </p>
 
   <p>
-    Dr. Seely is the <strong>CEO of the Centre for Health Innovation (CHI)</strong> and the 
-    <strong>Executive Director of the Patterson Institute for Integrative Oncology Research</strong>, 
-    where he is pioneering an <strong>evidence-informed, integrative oncology model</strong> that combines conventional and naturopathic care.
+    Dr. Seely is the <strong>CEO</strong> of the <strong>Centre for Health Innovation (CHI)</strong> and the 
+    <strong>Executive Director</strong> of the <strong>Patterson Institute for Integrative Oncology Research</strong>, 
+    where he is pioneering an evidence-informed, integrative oncology model that combines conventional and naturopathic care.
   </p>
 
   <p>
     A 2003 graduate of the 
-    <a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
+    <strong><a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
       Canadian College of Naturopathic Medicine (CCNM)
-    </a>, Dr. Seely brings over <strong>20 years of clinical experience</strong> to his practice.
-    He has published more than <strong>100 peer-reviewed papers and book chapters</strong> and has led a thriving, 
-    multi-disciplinary clinic in Ottawa for the past 12 years.
+    </a></strong>, Dr. Seely brings over 20 years of clinical experience to his practice.
+    He has <strong>published more than 100 peer-reviewed papers and book chapters</strong> and has led a thriving, 
+    <strong>multi-disciplinary clinic</strong> in Ottawa for the past 12 years.
   </p>
 
   <p>
