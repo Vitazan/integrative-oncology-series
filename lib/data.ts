@@ -35,26 +35,26 @@ export const speakers: Speaker[] = [
     bio: "Dr. Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. In addition to three decades clinical experience, he also was head of the interventional arm of a US-NIH funded human research trial using IV and integrative therapies in cancer patients. He founded Advanced Medical Therapies in Seattle, Washington, a clinic focusing on cancer and chronic diseases and now focuses his time in collaboration with clinics and hospitals in the US and other countries.",
     biohtml: `
   <p>
-    <strong>Dr. Paul Anderson</strong> is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. 
-    In addition to over <strong>30 years of clinical experience</strong>, he led the interventional arm of a 
+    Dr. Paul Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. 
+    In addition to over 30 years of clinical experience, he led the interventional arm of a 
     <strong>US-NIH funded human research trial</strong> using IV and integrative therapies in cancer patients.
   </p>
 
   <p>
     He founded <strong>Advanced Medical Therapies</strong> in Seattle, Washington—a clinic specializing in cancer and chronic disease. 
-    He now collaborates with clinics and hospitals across the <strong>United States</strong> and internationally.
+    He now collaborates with clinics and hospitals across the United States and internationally.
   </p>
 
   <p>
     Former academic positions include posts at multiple medical schools, serving as <strong>Professor of Pharmacology and Clinical Medicine</strong> at 
-    <a href="https://bastyr.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">Bastyr University</a>, and as <strong>Chief of IV Services</strong> at the Bastyr Oncology Research Center.
+    <a href="https://bastyr.edu" target="_blank" rel="noopener noreferrer" class=" underline">Bastyr University</a>, and as <strong>Chief of IV Services</strong> at the Bastyr Oncology Research Center.
   </p>
 
   <p>
     Dr. Anderson is co-author of the Hay House book 
-    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">“Outside the Box Cancer Therapies”</a> with Dr. Mark Stengler, and contributed to the anthology 
-    <a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">“Success Breakthroughs”</a> with Jack Canfield, and 
-    <em>Cancer… The Journey from Diagnosis to Empowerment</em> by Lioncrest Publishing.
+    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" underline">“Outside the Box Cancer Therapies”</a> with Dr. Mark Stengler, and contributed to the anthology 
+    <a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class=" underline">“Success Breakthroughs”</a> with Jack Canfield, and 
+    <strong>Cancer… The Journey from Diagnosis to Empowerment</strong> by Lioncrest Publishing.
   </p>
 
   <p>
@@ -64,7 +64,7 @@ export const speakers: Speaker[] = [
 
   <p>
     A frequent <strong>CME speaker and educator</strong>, Dr. Anderson has expanded his reach through his online CE platform 
-    <a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">ConsultDrA.com</a> 
+    <a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer" class="underline">ConsultDrA.com</a> 
     and through his <strong>Advanced Applications in Medical Practice (AAMP)</strong> conferences, which deliver cutting-edge clinical education in a CME-accredited format.
   </p>
 `,
@@ -80,7 +80,7 @@ export const speakers: Speaker[] = [
     credentials: "ND, PhD",
     bio: "Dr. Paul Richard Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr. Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
     biohtml: `
-      Dr. Paul Richard Saunders is an accomplished professional with dual <strong>ND degrees</strong> from the 
+      <strong>Dr. Paul Richard Saunders is an accomplished professional with dual <strong>ND degrees</strong> from the 
       <a href="https://www.ccnm.edu" target="_blank">Canadian College of Naturopathic Medicine</a> and the National College in Portland.
       His extensive experience spans over <strong>30 years</strong>, employing a full range of naturopathic therapies and embracing complex cases.
 
