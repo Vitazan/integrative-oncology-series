@@ -12,6 +12,17 @@ body {
   }
 }
 
+.bio-html a {
+  color: #2563eb; /* Tailwind blue-600 */
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.bio-html a:hover {
+  color: #1e40af; /* Tailwind blue-800 */
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

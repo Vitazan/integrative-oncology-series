@@ -52,9 +52,9 @@ export const speakers: Speaker[] = [
 
   <p>
     Dr. Anderson is co-author of the Hay House book 
-    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" underline">“Outside the Box Cancer Therapies”</a> with Dr. Mark Stengler, and contributed to the anthology 
+    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" text-blue-600 underline">“Outside the Box Cancer Therapies”</a> with Dr. Mark Stengler, and contributed to the anthology 
     <a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class=" underline">“Success Breakthroughs”</a> with Jack Canfield, and 
-    <strong>Cancer… The Journey from Diagnosis to Empowerment</strong> by Lioncrest Publishing.
+    <em>Cancer… The Journey from Diagnosis to Empowerment</em> by Lioncrest Publishing.
   </p>
 
   <p>
@@ -63,8 +63,8 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    A frequent <strong>CME speaker and educator</strong>, Dr. Anderson has expanded his reach through his online CE platform 
-    <a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer" class="underline">ConsultDrA.com</a> 
+    A frequent <strong>CME speaker and educator,</strong> Dr. Anderson has expanded his reach through his online CE platform 
+    <a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer"  className="text-[#97c851] underline">ConsultDrA.com</a> 
     and through his <strong>Advanced Applications in Medical Practice (AAMP)</strong> conferences, which deliver cutting-edge clinical education in a CME-accredited format.
   </p>
 `,
@@ -153,53 +153,7 @@ export const speakers: Speaker[] = [
     bio: "Dr. Marsden ND obtained his undergraduate degree in Human Biology at the University of Toronto and graduated from the Canadian College of Naturopathic Medicine in 2002. ",
     biohtml: `
   <p>
-    <strong>Dr. Marsden, ND</strong> obtained his undergraduate degree in <strong>Human Biology</strong> at the 
-    <a href="https://www.utoronto.ca" target="_blank" rel="noopener noreferrer">University of Toronto</a> and graduated from the 
-    <a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer">Canadian College of Naturopathic Medicine</a> in 2002.
-    His path to naturopathic medicine began after witnessing the limitations of conventional treatments for complex, chronic conditions within his own family—and the potential of integrative medicine to offer more comprehensive solutions.
-  </p>
-
-  <p>
-    After graduation, Dr. Marsden traveled to several renowned teaching clinics and hospitals in Germany, where he observed how 
-    <strong>non-conventional therapies</strong>, when integrated appropriately, significantly improved outcomes for patients with chronic disease including cancer.
-    He was inspired by the growing body of research validating the clinical use of Complementary and Alternative therapies.
-  </p>
-
-  <p>
-    Since then, Dr. Marsden has remained committed to expanding access to evidence-informed <strong>naturopathic supportive care and integrative medicine</strong> in Canada.
-    This vision culminated in the creation of the <strong>Marsden Centre for Excellence in Integrative Medicine</strong>—a modern 6,000 ft² clinic in Canada that brings together 15 providers offering collaborative care across diverse specialties.
-    He runs the centre with his wife, <strong>Dr. Chaleunsouk, ND</strong>.
-  </p>
-
-  <p>
-    An educator at heart, Dr. Marsden has spent over 15 years teaching globally in the areas of <strong>supportive cancer care, IV infusion therapy</strong>, and <strong>environmental medicine</strong>.
-    He established Canada’s first post-graduate <strong>residency in cancer care</strong> affiliated with CCNM, which has trained many doctors including 
-    <strong>Dr. Lei Gu, ND</strong> and <strong>Dr. Shiva Jamshidi, ND</strong>, who continue to practice at the Centre.
-  </p>
-
-  <p>
-    He is also the course author and director for the 
-    <a href="https://oand.org" target="_blank" rel="noopener noreferrer">Ontario Association of Naturopathic Doctors (OAND)</a> certification course in intravenous infusion therapy.
-    Dr. Marsden is a highly sought-after public and professional speaker, with appearances on 
-    <strong>CBC News</strong>, <strong>Marketplace</strong>, <strong>TVO</strong>, <strong>National Post</strong>, and more.
-  </p>
-
-  <p>
-    He is also a dedicated researcher—conducting clinical research at the Centre with his fellows and consulting on advisory boards.
-    Dr. Marsden has held leadership roles such as executive board member of the OAND and chair of the <strong>Principle of Practice Committee</strong> for the 
-    <a href="https://oncanp.org" target="_blank" rel="noopener noreferrer">Oncology Association of Naturopathic Physicians</a>.
-    In this role, he helped publish the first <strong>Principles of Care guidelines in naturopathic oncology</strong> in 
-    <a href="https://www.mdpi.com/journal/curroncol" target="_blank" rel="noopener noreferrer">Current Oncology</a> (2019).
-  </p>
-
-  <p>
-    Currently, he serves on the medical advisory board for the 
-    <a href="https://ccran.org" target="_blank" rel="noopener noreferrer">Colorectal Cancer Resource and Advocacy Network (CCRAN)</a>, supporting those impacted by colorectal cancer.
-  </p>
-
-  <p>
-    Outside of his clinical and academic commitments, Dr. Marsden is a devoted father of two. He enjoys being in nature—hiking, sailing, camping, and relaxing by the water.
-    He’s also been a volunteer basketball coach for over 10 years at the <strong>Toronto Waldorf School</strong> in Vaughan, Ontario.
+    Dr. Eric Marsden, ND is a leading expert in integrative and naturopathic medicine with a focus on cancer care, IV therapy, and chronic disease. He is the founder of the Marsden Centre for Excellence in Integrative Medicine, a multidisciplinary clinic dedicated to evidence-informed care. With over 20 years of experience, Dr. Marsden has trained healthcare providers across North America and established Canada’s first naturopathic oncology residency. A published researcher and frequent speaker, he is passionate about advancing integrative medicine through clinical innovation, education, and ongoing research.
   </p>
 `
 ,

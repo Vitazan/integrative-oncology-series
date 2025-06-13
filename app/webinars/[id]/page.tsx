@@ -332,17 +332,17 @@ export default function WebinarPage({ params }: { params: Promise<{ id: string }
 
           {/* Speaker Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-1">
-              {speaker.name}
-            </h3>
-            <p className="text-emerald-600 font-medium mb-3">{speaker.title}</p>
-            <div className="text-gray-700 leading-relaxed space-y-4">
-              <div
-                dangerouslySetInnerHTML={{ __html: speaker.biohtml }}
-                className="[&>a]:text-emerald-600 [&>a]:underline [&>strong]:font-semibold"
-              />
-            </div>
-          </div>
+  <h3 className="text-2xl font-semibold text-gray-800 mb-1">
+    {speaker.name}
+  </h3>
+  <p className="text-emerald-600 font-medium mb-3">{speaker.title}</p>
+  
+  <div
+    className="text-gray-700 leading-relaxed space-y-4 [&_a]:text-blue-600 [&_a]:underline [&_a:hover]:text-blue-800"
+    dangerouslySetInnerHTML={{ __html: speaker.biohtml }}
+  />
+</div>
+
         </>
       )}
     </div>
