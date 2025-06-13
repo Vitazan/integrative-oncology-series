@@ -51,7 +51,7 @@ const WebinarPreview = () => {
                   </CardHeader>
                   <CardContent className="flex-grow pt-6">
                     <h3 className="text-xl font-bold mb-2 text-gray-800">{webinar.title}</h3>
-                    <p className="text-gray-600 mb-4">{webinar.shortDescription}</p>
+                    {/* <p className="text-gray-600 mb-4">{webinar.shortDescription}</p> */}
                     {speaker && (
                       <div className="flex items-center mt-4">
                         <img

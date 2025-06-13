@@ -261,7 +261,8 @@ export default function WebinarPage({ params }: { params: Promise<{ id: string }
             <div className="flex items-center"><Calendar className="h-5 w-5 mr-2" /> {webinar.date}</div>
             <div className="flex items-center"><Clock className="h-5 w-5 mr-2" /> {webinar.time}</div>
           </div>
-          <Button size="lg" style={{ backgroundColor: "#90b73e" }} className="bg-[#7d8d5b] hover:opacity-90 text-black">Register Now</Button>
+          <a href={webinar.registrationLink} target="_blank"><Button size="lg" style={{ backgroundColor: "#90b73e" }} className="bg-[#7d8d5b] hover:opacity-90 text-black">Register Now</Button></a>
+
         </div>
       </section>
 

@@ -71,27 +71,30 @@ const WebinarList = () => {
                         </div>
                       </CardHeader>
 
-                      <CardContent className="flex-grow pt-2">
-                        <Link href={`/webinars/${webinar.id}`} className="flex items-center">
-                        <h3 className="text-xl hover:text-gray-950 font-bold mb-2 text-[#0a3371]">{webinar.title}</h3>
-                        </Link>
-                        <p className="text-gray-600 mb-4">{webinar.shortDescription}</p>
+                      <CardContent className="flex flex-col gap-4 p-4 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200">
+  <Link href={`/webinars/${webinar.id}`} className="group">
+    <h3 className="text-xl font-semibold text-[#0a3371] group-hover:text-gray-900 transition-colors duration-200">
+      {webinar.title}
+    </h3>
+  </Link>
 
-                        {speaker && (
-                          <div className="mt-4 bg-gray-50 p-4 rounded-lg">
-                            <div className="flex flex-col">
-                              <Link href={`/webinars/${webinar.id}`} className="flex items-center">
-                              <h4 className="font-bold text-gray-800 hover:text-blue-950">
-                                {speaker.name}, {speaker.credentials}
-                              </h4>
-                              </Link>
-                              {/* <p className="text-emerald-600 text-sm font-medium mb-2">{speaker.title}</p> */}
-                              <p className="text-sm text-gray-600 line-clamp-2">{speaker.bio}</p>
-                              {/* <p className="text-xs text-emerald-700 mt-2 font-medium">Research: {speaker.research}</p> */}
-                            </div>
-                          </div>
-                        )}
-                      </CardContent>
+  {speaker && (
+    <div className="bg-gray-50 rounded-xl p-4  ">
+      <Link href={`/webinars/${webinar.id}`} className="group">
+        <h4 className="text-base font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-200">
+          {speaker.name}, {speaker.credentials}
+        </h4>
+      </Link>
+
+      <p className="text-sm text-gray-500 mt-1">{speaker.title}</p>
+
+      <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+        {speaker.bio}
+      </p>
+    </div>
+  )}
+</CardContent>
+
 
                       <CardFooter className="flex justify-between pt-4">
                         <Button variant="outline" asChild>
