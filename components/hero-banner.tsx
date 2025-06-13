@@ -117,7 +117,7 @@ const HeroBanner = () => {
 
   <p className="text-gray-800 font-medium text-sm sm:text-base">
     <span className="font-semibold block sm:inline">
-      5 Expert Speakers from Sept 2025 – Feb 2026
+      5 expert speakers from September 2025 – February 2026
     </span>
   </p>
 </motion.div>

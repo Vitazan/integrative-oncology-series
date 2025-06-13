@@ -80,9 +80,9 @@ export const speakers: Speaker[] = [
     credentials: "ND, PhD",
     bio: "Dr. Paul Richard Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr. Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
     biohtml: `
-      <strong>Dr. Paul Richard Saunders is an accomplished professional with dual <strong>ND degrees</strong> from the 
+      Dr. Paul Richard Saunders is an accomplished professional with dual ND degrees from the 
       <a href="https://www.ccnm.edu" target="_blank">Canadian College of Naturopathic Medicine</a> and the National College in Portland.
-      His extensive experience spans over <strong>30 years</strong>, employing a full range of naturopathic therapies and embracing complex cases.
+      His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.
 
       He held roles as <strong>Clinic Director</strong> and <strong>Associate Dean</strong> at CCNM, and continues to 
       educate and publish as an <strong>Adjunct Professor</strong> at the 
@@ -90,7 +90,7 @@ export const speakers: Speaker[] = [
 
       He is involved with <a href="https://www.nih.gov" target="_blank">NIH</a>, and was twice named 
       <strong>Ontario Naturopathic Doctor of the Year</strong>. He also advised 
-      <strong>Health Canada</strong>'s Natural Health Products Directorate.
+      <strong>Health Canada's Natural Health Products Directorate.</strong>
     `,
     research: "Herbal medicine safety and efficacy in cancer care",
     webinarId: "herbal-medicine",
@@ -104,7 +104,7 @@ export const speakers: Speaker[] = [
     bio: "Dr. McKinney has a BSc. in Biosciences from Simon Fraser University, studied kinesiology at the University of Waterloo, and received a Doctor of Naturopathic Medicine from National College of Naturopathic Medicine (1985). ",
     biohtml: `
   <p>
-    <strong>Dr. Neil McKinney, ND</strong> holds a <strong>BSc in Biosciences</strong> from 
+    Dr. Neil McKinney, ND holds a <strong>BSc in Biosciences</strong> from 
     <a href="https://www.sfu.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">Simon Fraser University</a>,
     studied kinesiology at the <a href="https://uwaterloo.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
     University of Waterloo</a>, and earned his <strong>Doctor of Naturopathic Medicine</strong> from the 
@@ -113,7 +113,7 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    Dr. McKinney also completed <strong>3 years of Traditional Chinese Medicine training</strong> at the 
+    Dr. McKinney also completed 3 years of Traditional Chinese Medicine training at the 
     Oregon College of Oriental Medicine. His background includes several years of experience in cancer research, 
     particularly in the areas of <strong>novel radiation therapies</strong> and <strong>radiosensitizing drugs</strong>.
   </p>
@@ -130,13 +130,13 @@ export const speakers: Speaker[] = [
     BC Naturopathic Association</a> and the 
     <a href="https://binm.org" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
     Boucher Institute of Naturopathic Medicine</a>. He is a former <strong>Professor of Naturopathic Oncology</strong> and 
-    the author of <strong>six textbooks</strong> on the subject.
+    the author of six textbooks on the subject.
   </p>
 
   <p>
     He continues to <strong>mentor and lecture</strong> to naturopathic doctors around the world, contributing 
     to professional publications and public education. Now retired from decades of clinical practice with a focus 
-    on <strong>integrative oncology</strong>, Dr. McKinney remains actively engaged in 
+    on integrative oncology, Dr. McKinney remains actively engaged in 
     <strong>cancer research, professional education,</strong> and publishing.
   </p>
 `
@@ -205,7 +205,7 @@ export const speakers: Speaker[] = [
 export const webinars: Webinar[] = [
   {
     id: "nutritional-strategies",
-    title: "Healing after Chemotherapy and Radiation",
+    title: "Healing After Chemotherapy and Radiation",
     description:
       "This comprehensive webinar explores evidence-based nutritional approaches for cancer patients. Dr. Sarah Johnson will discuss anti-inflammatory diets, targeted supplementation, and nutritional strategies to mitigate treatment side effects. Learn how to integrate these approaches with conventional cancer treatments for optimal patient outcomes.",
     shortDescription: "TBD",
@@ -250,7 +250,7 @@ export const webinars: Webinar[] = [
   },
   {
     id: "lifestyle-medicine",
-    title: "Navigating off-label prescription meds for cancer",
+    title: "Navigating Off-Label Prescription Meds for Cancer",
     description:
       "TBD",
     shortDescription: "TBD",

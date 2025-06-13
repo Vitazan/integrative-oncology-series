@@ -119,8 +119,8 @@ export default function Home() {
             </ul>
 
             <p className="text-lg text-gray-600 mb-8">
-              Join us for the highly anticipated <span style={{ color: "#0a3371" }} className="font-semibold">second edition</span>,
-              featuring five renowned experts each delivering a powerful one-hour lecture. 
+              Join us for this highly anticipated <span style={{ color: "#0a3371" }} className="font-semibold">second edition</span>,
+              featuring five renowned experts, each delivering a powerful one-hour lecture. 
             </p>
             <p  className="text-lg text-gray-600 mb-8">
               <span style={{ color: "#0a3371" }} className="font-semibold"> Reserve your spot today</span>, save the date, and come ready with your questions—this is your chance to learn directly from leaders in the
