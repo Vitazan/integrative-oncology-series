@@ -130,7 +130,7 @@ export default function Home() {
           </div>
           <div className="relative rounded-xl overflow-hidden shadow-xl">
             <img
-              src="/herobanner.jpg"
+              src="/herobanner.jpeg"
               alt="Healthcare professionals discussing integrative oncology approaches"
               className="w-full h-auto rounded-xl"
             />

@@ -76,7 +76,7 @@ export const speakers: Speaker[] = [
   {
     id: "dr-paul-s",
     name: "Dr Paul Saunders",
-    title: "TBD",
+    title: "ND, PhD, RHOM",
     credentials: "ND, PhD",
     bio: "Dr. Paul Richard Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr. Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
     biohtml: `
@@ -263,14 +263,14 @@ export const webinars: Webinar[] = [
   },
   {
     id: "herbal-medicine",
-    title: "TBD",
+    title: "Phytoestrogens and Genetic Breast Cancer Risk",
     description:
       "TBD",
     shortDescription: "soon to be updated",
     date: "November 19, 2025 ",
     time: "1:00 PM – 2:00 PM  EST",
     speakerId: "dr-paul-s",
-    registrationLink: "#",
+    registrationLink:"https://attendee.gotowebinar.com/register/8281497838955474525",
   },
   {
     id: "microbiome-cancer",
