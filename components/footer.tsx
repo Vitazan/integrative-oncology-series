@@ -11,7 +11,7 @@ const Footer = () => {
               <img src="/NFH x Vitazan.png" alt="New Roots Herbal" className="h-14" />
             </Link>
             <p className="text-gray-800 mb-6 max-w-md">
-              Join our expert-led Integrative Oncology Series—advance your practice and support cancer survivors.
+              Join our expert-led Integrative Oncology Series to advance your practice and support cancer survivors.
             </p>
            
           </div>
