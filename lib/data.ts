@@ -257,7 +257,7 @@ export const webinars: Webinar[] = [
     date: "February 18, 2026 ",
     time: "1:00 PM - 2:00 PM EST",
     speakerId: "dr-dugald",
-    registrationLink: "#",
+    registrationLink: "https://attendee.gotowebinar.com/register/4475631798118729308",
   },
 ]
 
