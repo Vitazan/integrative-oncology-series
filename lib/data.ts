@@ -212,7 +212,7 @@ export const webinars: Webinar[] = [
     date: "September 10, 2025 ",
     time: "1:00 PM – 2:00 PM  EST",
     speakerId: "dr-paul-a",
-    registrationLink: "#",
+    registrationLink: "https://attendee.gotowebinar.com/register/4271114938770009180",
     
   },
   {
@@ -250,7 +250,7 @@ export const webinars: Webinar[] = [
   },
   {
     id: "lifestyle-medicine",
-    title: "Navigating Off-Label Prescription Meds for Cancer",
+    title: "Off-Label Medication Use in Cancer Care",
     description:
       "TBD",
     shortDescription: "TBD",
