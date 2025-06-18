@@ -85,7 +85,7 @@ const WebinarList = () => {
                         </div>
                       </CardHeader>
 
-                      <CardContent className="flex flex-col gap-4 p-4 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200">
+                      <CardContent className="flex flex-col gap-4 p-4   rounded-2xl   transition-shadow duration-200">
                         <Link
                           href={`/webinars/${webinar.id}`}
                           className="group"

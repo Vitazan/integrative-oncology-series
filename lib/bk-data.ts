@@ -1,36 +1,30 @@
 export type Speaker = {
-  id: string;
-  name: string;
-  title: string;
-  credentials: string;
-  bio: string;
-  biohtml: string;
-  research: string;
-  webinarId: string;
-  image: string;
-};
+  id: string
+  name: string
+  title: string
+  credentials: string
+  bio: string
+  biohtml:string
+  research: string
+  webinarId: string
+  image: string
+}
 
 export type Webinar = {
-  id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  date: string;
-  time: string;
-  speakerId: string;
-  registrationLink: string;
-  learningObjectives: string[]; // ✅ optional
-  details: {
-    cost: string;
-    audience: string;
-    format: string;
-  };
-};
+  id: string
+  title: string
+  description: string
+  shortDescription: string
+  date: string
+  time: string
+  speakerId: string
+  registrationLink: string
+}
 
 export type FAQ = {
-  question: string;
-  answer: string;
-};
+  question: string
+  answer: string
+}
 
 export const speakers: Speaker[] = [
   {
@@ -145,7 +139,8 @@ export const speakers: Speaker[] = [
     on integrative oncology, Dr McKinney remains actively engaged in 
     <strong>cancer research, professional education,</strong> and publishing.
   </p>
-`,
+`
+,
     research: "Microbiome modulation for cancer immunotherapy support",
     webinarId: "microbiome-cancer",
     image: "/speakers/speaker3.jpg",
@@ -160,7 +155,8 @@ export const speakers: Speaker[] = [
   <p>
     Dr Eric Marsden, ND, is a leading expert in integrative and naturopathic medicine with a focus on cancer care, IV therapy, and chronic disease. He is the founder of the Marsden Centre for Excellence in Integrative Medicine, a multidisciplinary clinic dedicated to evidence-informed care. With over 20 years of experience, Dr Marsden has trained healthcare providers across North America and established Canada’s first naturopathic oncology residency. A published researcher and frequent speaker, he is passionate about advancing integrative medicine through clinical innovation, education, and ongoing research.
   </p>
-`,
+`
+,
     research: "Stress reduction techniques and cancer outcomes",
     webinarId: "mind-body-approaches",
     image: "/speakers/speaker4.jpg",
@@ -198,161 +194,81 @@ export const speakers: Speaker[] = [
     <strong>business of integrative medicine</strong> and enjoys sharing insights into both clinical excellence and 
     the successful operation of healthcare practices.
   </p>
-`,
+`
+,
     research: "Mapping the Future: Next-Gen Tools for Personalized Cancer Care",
     webinarId: "lifestyle-medicine",
     image: "/speakers/speaker5.jpg",
   },
-];
+]
 
 export const webinars: Webinar[] = [
   {
     id: "nutritional-strategies",
     title: "Healing After Chemotherapy and Radiation",
-
+    description:
+      "This comprehensive webinar explores evidence-based nutritional approaches for cancer patients. Dr Sarah Johnson will discuss anti-inflammatory diets, targeted supplementation, and nutritional strategies to mitigate treatment side effects. Learn how to integrate these approaches with conventional cancer treatments for optimal patient outcomes.",
+    shortDescription: "TBD",
     date: "September 10, 2025 ",
     time: "1:00 PM – 2:30 PM  EST",
     speakerId: "dr-paul-a",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/4271114938770009180",
-
-    description:
-      "Every patient who has had standard of care oncology modalities employed in their case has some level of intra or post treatment adverse effect. The purpose of this presentation is to break down the causes of these adverse effects and to assess potential restorative therapies.",
-    shortDescription:
-      "Explore therapeutic strategies for mitigating adverse effects of conventional oncology care.",
-
-    learningObjectives: [
-      "Describe the basis of cytotoxic chemotherapy adverse effects",
-      "Describe the basis of radiotherapy adverse effects",
-      "Describe the effects of chemotherapy and radiation on the tumor microenvironment",
-      "Describe potential therapeutic interventions for these effects",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Healthcare professionals involved in oncology care",
-      format: "Live webinar with Q&A",
-    },
+    registrationLink: "https://attendee.gotowebinar.com/register/4271114938770009180",
+    
   },
   {
     id: "herbal-medicine",
     title: "Phytoestrogens and Genetic Breast Cancer Risk",
-
+    description:
+      "TBD",
+    shortDescription: "soon to be updated",
     date: "November 19, 2025 ",
     time: "1:00 PM – 2:30 PM  EST",
     speakerId: "dr-paul-s",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/8281497838955474525",
-
-    description:
-      "TBD",
-    shortDescription:
-      "TBD",
-
-    learningObjectives: [
-      "TBD",
-      "TBD",
-      "TBD",
-      "TBD",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Healthcare professionals involved in oncology care",
-      format: "Live webinar with Q&A",
-    },
+    registrationLink:"https://attendee.gotowebinar.com/register/8281497838955474525",
   },
   {
     id: "microbiome-cancer",
     title: "Prostate Cancer Update",
-
+    description:
+      "neil",
+    shortDescription: "Learn cutting-edge naturopathic strategies that go beyond conventional prostate cancer care",
     date: "December 10, 2025 ",
     time: "1:00 PM - 2:30 PM EST",
     speakerId: "dr-neil",
-    registrationLink:
-      "https://register.gotowebinar.com/register/1817335938156515166",
-
-    description:
-      "Prostate cancer (PC) is very different than any other cancer, with unique causes, diagnostic markers, drivers of proliferation, and pattern of spread. The standard of care (SOC) in orthodox urological oncology is primarily centered on control of testosterone and its receptors. These will lose effectiveness over time. Radiation, steroids, and other medical tools are primarily palliative to late-stage prostate cancers.  The standards of care from a naturopathic perspective are still evolving. The first reliable protocols were developed among ONCANP members circa 2010, followed within the decade by the inclusion of new metabolic therapies. More recent research has revealed some novel additional remedies which could transform the care of this disease.",
-    shortDescription:
-      "Explore evolving naturopathic protocols and new metabolic therapies for prostate cancer.",
-
-    learningObjectives: [
-      "Provide diet and lifestyle recommendations to prevent, slow, or hold PC",
-      "Effectively support all SOC medical therapies",
-      "Recognize the many therapeutics that naturopathic doctors have found clinically effective, as well as their limitations",
-      "Describe novel candidate agents which are supported by up-to-date pre-clinical research, with the understanding of their targets",
-      "Synthesize a naturopathic protocol for PC which is practical, achievable, and robust",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Naturopathic doctors and integrative oncology professionals",
-      format: "Live session with downloadable handouts",
-    },
+    registrationLink: "https://register.gotowebinar.com/register/1817335938156515166",
   },
   {
     id: "mind-body-approaches",
     title: "Mapping the Future: Next-Gen Tools for Personalized Cancer Care",
-
-    date: "January 14, 2026 ",
+    description:
+      "Explore how advanced precision tools are reshaping oncology—from early detection to real-time surveillance and individualized treatment strategies.",
+    shortDescription: "Explore how advanced precision tools are reshaping oncology",
+     date: "January 14, 2026 ",
     time: "1:00 PM - 2:30 PM EST",
     speakerId: "dr-eric",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/6317651324404373085",
-
-    description:
-      "The landscape of cancer care is evolving rapidly, with precision assessment tools playing a pivotal role in early detection, surveillance, and personalized treatment strategies. This lecture will explore how advanced diagnostics—ranging from liquid biopsies and genomic profiling to metabolic imaging and tumor microenvironment analysis—are reshaping oncology.",
-    shortDescription:
-      "Explore how advanced diagnostics are transforming cancer detection and care strategies.",
-
-    learningObjectives: [
-      "Screening & Early Detection – Examining cutting-edge tools such as circulating tumor DNA (ctDNA) and methylation patterns, advanced imaging techniques, and more to enhance early cancer detection",
-      "Surveillance & Monitoring – Understanding how precision diagnostics, including molecular markers, allow for real-time tracking of disease progression, early relapse, and treatment response",
-      "Therapy Selection & Personalization – Reviewing how next-generation sequencing, tumor mutational burden analysis, and pharmacogenomics are guiding targeted therapies and immunotherapy choices",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Clinicians and diagnostic professionals in oncology",
-      format: "Live presentation with Q&A",
-    },
+    registrationLink: "https://attendee.gotowebinar.com/register/6317651324404373085",
   },
   {
     id: "lifestyle-medicine",
     title: "Off-Label Medication Use in Cancer Care",
-
+    description:
+      "TBD",
+    shortDescription: "TBD",
     date: "February 18, 2026 ",
     time: "1:00 PM - 2:30 PM EST",
     speakerId: "dr-dugald",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/4475631798118729308",
-
-    description:
-      "The off-label use of medications in cancer care is a growing practice that has garnered attention for its potential to improve patient outcomes. Off-label prescribing refers to the use of a drug for an indication, dosage, or patient population that is not specifically approved by regulatory agencies. In oncology, this practice is prevalent due to the complex nature of cancer, promotion on the internet and through social media, intriguing mechanisms to control cancer, and the limited efficacy of approved therapies particularly in more advanced disease. For integrative healthcare practitioners, understanding this approach and the evidence on which it is based is essential, as patients may present with treatments involving off-label medications and/or be keen on using these therapies as part of their care. This presentation aims to provide an overview of the role of off-label drug use in cancer care, bridging conventional and naturopathic approaches. It will explore both the scientific basis and ethical considerations of this practice, ensuring naturopathic doctors are equipped to collaborate effectively in patient-centered care.",
-    shortDescription:
-      "Understand the role, risks, and opportunities of off-label drugs in naturopathic oncology care.",
-
-    learningObjectives: [
-      "Understand the concept of off-label drug use: Define off-label prescribing in the context of oncology and outline common scenarios where it is applied",
-      "Explore clinical applications: Highlight specific examples of off-label medications used in cancer care and their mechanisms of action",
-      "Examine integrative care opportunities: Discuss how naturopathic doctors can support patients undergoing off-label treatments",
-      "Address challenges and regulations: Assess the ethical, legal, and practical considerations of off-label prescribing, ensuring patient safety and informed decision-making",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Integrative and naturopathic healthcare professionals",
-      format: "Live webinar with expert insights",
-    },
+    registrationLink: "https://attendee.gotowebinar.com/register/4475631798118729308",
   },
-];
+]
 
 export const faqs: FAQ[] = [
   {
-    question:
-      "How is this series distinct from other integrative medicine webinars?",
+    question: "How is this series distinct from other integrative medicine webinars?",
     answer:
       "This CE-based webinar series integrates core oncology concepts with practical clinical application. It reviews cancer pathophysiology—highlighting angiogenesis, immune function, and their relevance in integrative care—then applies this knowledge to common patient concerns around natural products and lifestyle choices during and after conventional treatment. It explores evidence-informed approaches  helping clinicians translate science into effective, patient-centered care.",
   },
   {
-    question:
-      "Even if I don’t see cancer patients, how could this series benefit my clinical approach?",
+    question: "Even if I don’t see cancer patients, how could this series benefit my clinical approach?",
     answer:
       "NDs and integrative practitioners in general practice aim to support the whole person, not just the diagnosis. This series focuses on helping patients with a cancer diagnosis optimize their overall health and well-being, rather than offering direct cancer treatment. Cancer patients often have distinct needs that require informed, compassionate care. This series is designed to provide you with tools and knowledge to become 'oncology-informed'. Our expert panel will address the most common questions that arise in primary care, equipping you with the knowledge and tools to confidently support your patients through every stage of their journey.",
   },
@@ -376,18 +292,18 @@ export const faqs: FAQ[] = [
     answer:
       "Yes, each webinar includes a Q&A session where participants can submit questions for the speaker. We encourage active participation to make these sessions as valuable as possible for everyone.",
   },
-];
+]
 
 export function getSpeakerByWebinarId(webinarId: string): Speaker | undefined {
-  const webinar = webinars.find((w) => w.id === webinarId);
-  if (!webinar) return undefined;
+  const webinar = webinars.find((w) => w.id === webinarId)
+  if (!webinar) return undefined
 
-  return speakers.find((s) => s.id === webinar.speakerId);
+  return speakers.find((s) => s.id === webinar.speakerId)
 }
 
 export function getWebinarBySpeakerId(speakerId: string): Webinar | undefined {
-  const speaker = speakers.find((s) => s.id === speakerId);
-  if (!speaker) return undefined;
+  const speaker = speakers.find((s) => s.id === speakerId)
+  if (!speaker) return undefined
 
-  return webinars.find((w) => w.id === speaker.webinarId);
+  return webinars.find((w) => w.id === speaker.webinarId)
 }
