@@ -32,10 +32,10 @@ export const speakers: Speaker[] = [
     name: "Dr Paul Anderson",
     title: "ND",
     credentials: "ND",
-    bio: "Dr. Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. In addition to three decades clinical experience, he also was head of the interventional arm of a US-NIH funded human research trial using IV and integrative therapies in cancer patients. He founded Advanced Medical Therapies in Seattle, Washington, a clinic focusing on cancer and chronic diseases and now focuses his time in collaboration with clinics and hospitals in the US and other countries.",
+    bio: "Dr Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. In addition to three decades clinical experience, he also was head of the interventional arm of a US-NIH funded human research trial using IV and integrative therapies in cancer patients. He founded Advanced Medical Therapies in Seattle, Washington, a clinic focusing on cancer and chronic diseases and now focuses his time in collaboration with clinics and hospitals in the US and other countries.",
     biohtml: `
   <p>
-    Dr. Paul Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. 
+    Dr Paul Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. 
     In addition to over 30 years of clinical experience, he led the interventional arm of a 
     <strong>US-NIH funded human research trial</strong> using IV and integrative therapies in cancer patients.
   </p>
@@ -51,8 +51,8 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    Dr. Anderson is co-author of the Hay House book <strong>
-    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" text-blue-600 underline">“Outside the Box Cancer Therapies”</a> </strong>with Dr. Mark Stengler, and contributed to the anthology 
+    Dr Anderson is co-author of the Hay House book <strong>
+    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" text-blue-600 underline">“Outside the Box Cancer Therapies”</a> </strong>with Dr Mark Stengler, and contributed to the anthology 
     <strong><a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class=" underline">“Success Breakthroughs”</a></strong> with Jack Canfield, and 
     <strong>Cancer… The Journey from Diagnosis to Empowerment</strong> by Lioncrest Publishing.
   </p>
@@ -63,7 +63,7 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    A frequent CME speaker and educator, Dr. Anderson has expanded his reach through his online CE platform 
+    A frequent CME speaker and educator, Dr Anderson has expanded his reach through his online CE platform 
     <strong><a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer"  className="text-[#97c851] underline">ConsultDrA.com</a> </strong>
     and through his <strong>Advanced Applications in Medical Practice (AAMP)</strong> conferences, which deliver cutting-edge clinical education in a CME-accredited format.
   </p>
@@ -78,9 +78,9 @@ export const speakers: Speaker[] = [
     name: "Dr Paul Saunders",
     title: "ND, PhD, RHOM",
     credentials: "ND, PhD, RHOM ",
-    bio: "Dr. Paul Richard Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr. Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
+    bio: "Dr Paul Richard Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
     biohtml: `
-      Dr. Paul Richard Saunders is an accomplished professional with dual ND degrees from the 
+      Dr Paul Richard Saunders is an accomplished professional with dual ND degrees from the 
       <a href="https://www.ccnm.edu" target="_blank">Canadian College of Naturopathic Medicine</a> and the National College in Portland.
       His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.
 
@@ -113,7 +113,7 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    Dr. McKinney also completed three years of Traditional Chinese Medicine training at the 
+    Dr McKinney also completed three years of Traditional Chinese Medicine training at the 
     Oregon College of Oriental Medicine. His background includes several years of experience in cancer research, 
     particularly in the areas of <strong>novel radiation therapies</strong> and <strong>radiosensitizing drugs</strong>.
   </p>
@@ -125,7 +125,7 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    Dr. McKinney is the founder of both the 
+    Dr McKinney is the founder of both the 
     <a href="https://www.bcna.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
     BC Naturopathic Association</a> and the 
     <a href="https://binm.org" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
@@ -136,7 +136,7 @@ export const speakers: Speaker[] = [
   <p>
     He continues to <strong>mentor and lecture</strong> to naturopathic doctors around the world, contributing 
     to professional publications and public education. Now retired from decades of clinical practice with a focus 
-    on integrative oncology, Dr. McKinney remains actively engaged in 
+    on integrative oncology, Dr McKinney remains actively engaged in 
     <strong>cancer research, professional education,</strong> and publishing.
   </p>
 `
@@ -150,10 +150,10 @@ export const speakers: Speaker[] = [
     name: "Dr Eric Marsden",
     title: "ND",
     credentials: "ND",
-    bio: "Dr. Marsden ND obtained his undergraduate degree in human biology at the University of Toronto and graduated from the Canadian College of Naturopathic Medicine in 2002. ",
+    bio: "Dr Marsden ND obtained his undergraduate degree in human biology at the University of Toronto and graduated from the Canadian College of Naturopathic Medicine in 2002. ",
     biohtml: `
   <p>
-    Dr. Eric Marsden, ND, is a leading expert in integrative and naturopathic medicine with a focus on cancer care, IV therapy, and chronic disease. He is the founder of the Marsden Centre for Excellence in Integrative Medicine, a multidisciplinary clinic dedicated to evidence-informed care. With over 20 years of experience, Dr. Marsden has trained healthcare providers across North America and established Canada’s first naturopathic oncology residency. A published researcher and frequent speaker, he is passionate about advancing integrative medicine through clinical innovation, education, and ongoing research.
+    Dr Eric Marsden, ND, is a leading expert in integrative and naturopathic medicine with a focus on cancer care, IV therapy, and chronic disease. He is the founder of the Marsden Centre for Excellence in Integrative Medicine, a multidisciplinary clinic dedicated to evidence-informed care. With over 20 years of experience, Dr Marsden has trained healthcare providers across North America and established Canada’s first naturopathic oncology residency. A published researcher and frequent speaker, he is passionate about advancing integrative medicine through clinical innovation, education, and ongoing research.
   </p>
 `
 ,
@@ -166,16 +166,16 @@ export const speakers: Speaker[] = [
     name: "Dr Dugald Seely",
     title: "ND, MSc",
     credentials: "ND, MSc",
-    bio: "Dr. Dugald Seely, ND, MSc. – Dr. Seely is a naturopathic doctor and clinician scientist, specializing in integrative cancer care. Dr. Seely blends evidence-based approaches in clinical practice and is active in the conduct of synthesis and clinical research ",
+    bio: "Dr Dugald Seely, ND, MSc. – Dr Seely is a naturopathic doctor and clinician scientist, specializing in integrative cancer care. Dr Seely blends evidence-based approaches in clinical practice and is active in the conduct of synthesis and clinical research ",
     biohtml: `
   <p>
-    Dr. Dugald Seely, ND, MSc, is a naturopathic doctor and clinician scientist with a specialization in 
+    Dr Dugald Seely, ND, MSc, is a naturopathic doctor and clinician scientist with a specialization in 
     integrative cancer care. He is known for blending evidence-based medicine with 
     naturopathic principles, both in clinical settings and in the realm of research.
   </p>
 
   <p>
-    Dr. Seely is the <strong>CEO</strong> of the <strong>Centre for Health Innovation (CHI)</strong> and the 
+    Dr Seely is the <strong>CEO</strong> of the <strong>Centre for Health Innovation (CHI)</strong> and the 
     <strong>Executive Director</strong> of the <strong>Patterson Institute for Integrative Oncology Research</strong>, 
     where he is pioneering an evidence-informed, integrative oncology model that combines conventional and naturopathic care.
   </p>
@@ -184,13 +184,13 @@ export const speakers: Speaker[] = [
     A 2003 graduate of the 
     <strong><a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
       Canadian College of Naturopathic Medicine (CCNM)
-    </a></strong>, Dr. Seely brings over 20 years of clinical experience to his practice.
+    </a></strong>, Dr Seely brings over 20 years of clinical experience to his practice.
     He has <strong>published more than 100 peer-reviewed papers and book chapters</strong> and has led a thriving, 
     <strong>multi-disciplinary clinic</strong> in Ottawa for the past 12 years.
   </p>
 
   <p>
-    In addition to his clinical and academic contributions, Dr. Seely is also passionate about the 
+    In addition to his clinical and academic contributions, Dr Seely is also passionate about the 
     <strong>business of integrative medicine</strong> and enjoys sharing insights into both clinical excellence and 
     the successful operation of healthcare practices.
   </p>
@@ -207,7 +207,7 @@ export const webinars: Webinar[] = [
     id: "nutritional-strategies",
     title: "Healing After Chemotherapy and Radiation",
     description:
-      "This comprehensive webinar explores evidence-based nutritional approaches for cancer patients. Dr. Sarah Johnson will discuss anti-inflammatory diets, targeted supplementation, and nutritional strategies to mitigate treatment side effects. Learn how to integrate these approaches with conventional cancer treatments for optimal patient outcomes.",
+      "This comprehensive webinar explores evidence-based nutritional approaches for cancer patients. Dr Sarah Johnson will discuss anti-inflammatory diets, targeted supplementation, and nutritional strategies to mitigate treatment side effects. Learn how to integrate these approaches with conventional cancer treatments for optimal patient outcomes.",
     shortDescription: "TBD",
     date: "September 10, 2025 ",
     time: "1:00 PM – 2:00 PM  EST",
