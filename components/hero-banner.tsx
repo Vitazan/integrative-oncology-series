@@ -9,7 +9,7 @@ const RotatingText = () => {
   const phrases = [
     "Free for heathcare practitioners and students",
     "Advanced webinar series with CE credits",
-    "Clinically focused webinars for Naturopathic Doctors",
+    "Clinically focused webinars for naturopathic doctors",
  
    
   ]
@@ -117,8 +117,9 @@ const HeroBanner = () => {
 
   <p className="text-gray-800 font-medium text-sm sm:text-base">
     <span className="font-semibold block sm:inline">
-      5 expert speakers from September 2025 – February 2026
+      5 expert speakers from September 2025 – <br/> February 2026
     </span>
+   
   </p>
 </motion.div>
 
