@@ -244,15 +244,17 @@ export const webinars: Webinar[] = [
       "https://attendee.gotowebinar.com/register/8281497838955474525",
 
     description:
-      "TBD",
+      "Breast cancer can present as multiple types, with ductal, lobular, and inflammatory the most common types seen in clinical practice. Modern pathology diagnosis include estrogen, progesterone, and HER2 receptor status and often genetic status. Genetic status results take longer to differentiate and may confirm or change the course of conventional chemotherapy and radiation treatment. This review will look at the role phytoestrogens and various plant compounds can have in the course of clinical treatment with case examples.",
     shortDescription:
-      "TBD",
+      "Explore the role of phytoestrogens in breast cancer risk and treatment.",
 
     learningObjectives: [
-      "TBD",
-      "TBD",
-      "TBD",
-      "TBD",
+      "Know the four types of endogenous estrogens and their roles as found in humans",
+      "Understand the meaning(s) of estrogenic as relates to plants",
+      "Understand the importance of equol and breast cancer",
+      "Understand the importance of lignans and breast cancer",
+      "Understand the importance of nutrients and breast cancer",
+      "Understand the role some plants can play in genetic breast cancers",
     ],
     details: {
       cost: "FREE",
