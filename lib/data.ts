@@ -234,7 +234,7 @@ export const webinars: Webinar[] = [
   },
   {
     id: "herbal-medicine",
-    title: "Phytoestrogens and Genetic-Breast Cancer Risk",
+    title: "Phytoestrogens and Genetic Breast-Cancer Risk",
 
     date: "November 19, 2025 ",
     time: "1:00 PM – 2:30 PM  EST",
