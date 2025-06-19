@@ -93,7 +93,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <p className="text-lg text-gray-600">
-                  <span className="font-semibold">Gain the knowledge to deliver </span> the most effective posttreatment strategies
+                  <span className="font-semibold">Gain the knowledge to deliver </span> the most effective post+treatment strategies
                 </p>
               </li>
               <li className="flex items-start">

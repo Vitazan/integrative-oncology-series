@@ -155,7 +155,7 @@ const HeroBanner = () => {
 
   <p className="text-sm md:text-base text-gray-600  max-w-xl leading-relaxed">
     A complete learning resource for all health providers focused on <br />
-    prevention, treatment side effects, and long-term health outcomes.
+    prevention, treatment of side effects, and long-term health outcomes.
   </p>
 </motion.div>
 
