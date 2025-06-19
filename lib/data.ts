@@ -41,7 +41,7 @@ export const speakers: Speaker[] = [
     bio: "Dr Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. In addition to three decades clinical experience, he also was head of the interventional arm of a US-NIH funded human research trial using IV and integrative therapies in cancer patients. He founded Advanced Medical Therapies in Seattle, Washington, a clinic focusing on cancer and chronic diseases and now focuses his time in collaboration with clinics and hospitals in the US and other countries.",
     biohtml: `
   <p>
-    Dr Paul Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. 
+    Dr Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. 
     In addition to over 30 years of clinical experience, he led the interventional arm of a 
     <strong>US-NIH funded human research trial</strong> using IV and integrative therapies in cancer patients.
   </p>
@@ -57,14 +57,14 @@ export const speakers: Speaker[] = [
   </p>
 
   <p>
-    Dr Anderson is co-author of the Hay House book <strong>
+    Dr Anderson is coauthor of the Hay House book <strong>
     <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" text-blue-600 underline">“Outside the Box Cancer Therapies”</a> </strong>with Dr Mark Stengler, and contributed to the anthology 
     <strong><a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class=" underline">“Success Breakthroughs”</a></strong> with Jack Canfield, and 
     <strong>Cancer… The Journey from Diagnosis to Empowerment</strong> by Lioncrest Publishing.
   </p>
 
   <p>
-    He is also co-author of the IV therapy textbook 
+    He is also coauthor of the IV therapy textbook 
     <strong>“A Scientific Reference for Intravenous Nutrient Therapy”</strong> with Drs. Osborne and Carter.
   </p>
 
@@ -84,9 +84,9 @@ export const speakers: Speaker[] = [
     name: "Dr Paul Saunders",
     title: "ND, PhD, RHOM",
     credentials: "ND, PhD, RHOM ",
-    bio: "Dr Paul Richard Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
+    bio: "Dr Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
     biohtml: `
-      Dr Paul Richard Saunders is an accomplished professional with dual ND degrees from the 
+      Dr Saunders is an accomplished professional with dual ND degrees from the 
       <a href="https://www.ccnm.edu" target="_blank">Canadian College of Naturopathic Medicine</a> and the National College in Portland.
       His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.
 
@@ -95,8 +95,8 @@ export const speakers: Speaker[] = [
       <a href="https://www.nuhs.edu" target="_blank">National University of Health Sciences</a>.
 
       He is involved with <a href="https://www.nih.gov" target="_blank">NIH</a>, and was twice named 
-      <strong>Ontario Naturopathic Doctor of the Year</strong>. He also advised 
-      <strong>Health Canada's Natural Health Products Directorate.</strong>
+    Ontario Naturopathic Doctor of the Year. He also advised 
+ Health Canada’s Natural Health Products Directorate.
     `,
     research: "Herbal medicine safety and efficacy in cancer care",
     webinarId: "herbal-medicine",
@@ -105,15 +105,15 @@ export const speakers: Speaker[] = [
   {
     id: "dr-neil",
     name: "Dr Neil McKinney",
-    title: "ND (non-practicing)",
-    credentials: "ND (non-practicing)",
+    title: "ND (nonpracticing)",
+    credentials: "ND (nonpracticing)",
     bio: "Dr McKinney has a BSc in biosciences from Simon Fraser University, studied kinesiology at the University of Waterloo, and received a Doctor of Naturopathic Medicine from National College of Naturopathic Medicine (1985). ",
     biohtml: `
   <p>
-    Dr Neil McKinney, ND, holds a <strong>BSc in biosciences</strong> from 
+    Dr McKinney holds a <strong>BSc in biosciences</strong> from 
     <a href="https://www.sfu.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">Simon Fraser University</a>,
     studied kinesiology at the <a href="https://uwaterloo.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-    University of Waterloo</a>, and earned his <strong>Doctor of Naturopathic Medicine</strong> from the 
+    University of Waterloo</a>, and earned his <strong>Doctorate of Naturopathic Medicine</strong> from the 
     <a href="https://nunm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
     National College of Naturopathic Medicine</a> in 1985.
   </p>
@@ -155,10 +155,10 @@ export const speakers: Speaker[] = [
     name: "Dr Eric Marsden",
     title: "ND",
     credentials: "ND",
-    bio: "Dr Marsden ND obtained his undergraduate degree in human biology at the University of Toronto and graduated from the Canadian College of Naturopathic Medicine in 2002. ",
+    bio: "Dr Marsden obtained his undergraduate degree in human biology at the University of Toronto and graduated from the Canadian College of Naturopathic Medicine in 2002. ",
     biohtml: `
   <p>
-    Dr Eric Marsden, ND, is a leading expert in integrative and naturopathic medicine with a focus on cancer care, IV therapy, and chronic disease. He is the founder of the Marsden Centre for Excellence in Integrative Medicine, a multidisciplinary clinic dedicated to evidence-informed care. With over 20 years of experience, Dr Marsden has trained healthcare providers across North America and established Canada’s first naturopathic oncology residency. A published researcher and frequent speaker, he is passionate about advancing integrative medicine through clinical innovation, education, and ongoing research.
+    Dr Marsden is a leading expert in integrative and naturopathic medicine with a focus on cancer care, IV therapy, and chronic disease. He is the founder of the Marsden Centre for Excellence in Integrative Medicine, a multidisciplinary clinic dedicated to evidence-informed care. With over 20 years of experience, Dr Marsden has trained healthcare providers across North America and established Canada’s first naturopathic oncology residency. A published researcher and frequent speaker, he is passionate about advancing integrative medicine through clinical innovation, education, and ongoing research.
   </p>
 `,
     research: "Stress reduction techniques and cancer outcomes",
@@ -170,10 +170,10 @@ export const speakers: Speaker[] = [
     name: "Dr Dugald Seely",
     title: "ND, MSc",
     credentials: "ND, MSc",
-    bio: "Dr Dugald Seely, ND, MSc. – Dr Seely is a naturopathic doctor and clinician scientist, specializing in integrative cancer care. Dr Seely blends evidence-based approaches in clinical practice and is active in the conduct of synthesis and clinical research ",
+    bio: "Dr Seely is a naturopathic doctor and clinician scientist, specializing in integrative cancer care. Dr Seely blends evidence-based approaches in clinical practice and is active in the conduct of synthesis and clinical research ",
     biohtml: `
   <p>
-    Dr Dugald Seely, ND, MSc, is a naturopathic doctor and clinician scientist with a specialization in 
+    Dr Seely is a naturopathic doctor and clinician scientist with a specialization in 
     integrative cancer care. He is known for blending evidence-based medicine with 
     naturopathic principles, both in clinical settings and in the realm of research.
   </p>
@@ -187,10 +187,9 @@ export const speakers: Speaker[] = [
   <p>
     A 2003 graduate of the 
     <strong><a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-      Canadian College of Naturopathic Medicine (CCNM)
-    </a></strong>, Dr Seely brings over 20 years of clinical experience to his practice.
+      Canadian College of Naturopathic Medicine (CCNM)</a></strong>, Dr Seely brings over 20 years of clinical experience to his practice.
     He has <strong>published more than 100 peer-reviewed papers and book chapters</strong> and has led a thriving, 
-    <strong>multi-disciplinary clinic</strong> in Ottawa for the past 12 years.
+    <strong>multidisciplinary clinic</strong> in Ottawa for the past 12 years.
   </p>
 
   <p>
@@ -211,20 +210,20 @@ export const webinars: Webinar[] = [
     title: "Healing After Chemotherapy and Radiation",
 
     date: "September 10, 2025 ",
-    time: "1:00 PM – 2:30 PM  EST",
+    time: "1:00 PM – 2:30 PM  EDT",
     speakerId: "dr-paul-a",
     registrationLink:
       "https://attendee.gotowebinar.com/register/4271114938770009180",
 
     description:
-      "Every patient who has had standard of care oncology modalities employed in their case has some level of intra or post treatment adverse effect. The purpose of this presentation is to break down the causes of these adverse effects and to assess potential restorative therapies.",
+      "Every patient who has had standard-of-care oncology modalities employed in their case has some level of intra- or postreatment adverse effect. The purpose of this presentation is to break down the causes of these adverse effects and to assess potential restorative therapies.",
     shortDescription:
       "Explore therapeutic strategies for mitigating adverse effects of conventional oncology care.",
 
     learningObjectives: [
       "Describe the basis of cytotoxic chemotherapy adverse effects",
       "Describe the basis of radiotherapy adverse effects",
-      "Describe the effects of chemotherapy and radiation on the tumor microenvironment",
+      "Describe the effects of chemotherapy and radiation on the tumour microenvironment",
       "Describe potential therapeutic interventions for these effects",
     ],
     details: {
@@ -235,7 +234,7 @@ export const webinars: Webinar[] = [
   },
   {
     id: "herbal-medicine",
-    title: "Phytoestrogens and Genetic Breast Cancer Risk",
+    title: "Phytoestrogens and Genetic-Breast Cancer Risk",
 
     date: "November 19, 2025 ",
     time: "1:00 PM – 2:30 PM  EST",
@@ -244,7 +243,7 @@ export const webinars: Webinar[] = [
       "https://attendee.gotowebinar.com/register/8281497838955474525",
 
     description:
-      "Breast cancer can present as multiple types, with ductal, lobular, and inflammatory the most common types seen in clinical practice. Modern pathology diagnosis include estrogen, progesterone, and HER2 receptor status and often genetic status. Genetic status results take longer to differentiate and may confirm or change the course of conventional chemotherapy and radiation treatment. This review will look at the role phytoestrogens and various plant compounds can have in the course of clinical treatment with case examples.",
+      "Breast cancer can present as multiple types, with ductal, lobular, and inflammatory being the most common types seen in clinical practice. Modern pathology diagnosis include estrogen, progesterone, and HER2-receptor status and often genetic status. Genetic status results take longer to differentiate and may confirm or change the course of conventional chemotherapy and radiation treatment. This review will look at the role phytoestrogens and various plant compounds can have in the course of clinical treatment, with case examples.",
     shortDescription:
       "Explore the role of phytoestrogens in breast cancer risk and treatment.",
 
@@ -281,7 +280,7 @@ export const webinars: Webinar[] = [
       "Provide diet and lifestyle recommendations to prevent, slow, or hold PC",
       "Effectively support all SOC medical therapies",
       "Recognize the many therapeutics that naturopathic doctors have found clinically effective, as well as their limitations",
-      "Describe novel candidate agents which are supported by up-to-date pre-clinical research, with the understanding of their targets",
+      "Describe novel candidate agents which are supported by up-to-date preclinical research, with the understanding of their targets",
       "Synthesize a naturopathic protocol for PC which is practical, achievable, and robust",
     ],
     details: {
@@ -356,7 +355,7 @@ export const faqs: FAQ[] = [
     question:
       "Even if I don’t see cancer patients, how could this series benefit my clinical approach?",
     answer:
-      "NDs and integrative practitioners in general practice aim to support the whole person, not just the diagnosis. This series focuses on helping patients with a cancer diagnosis optimize their overall health and well-being, rather than offering direct cancer treatment. Cancer patients often have distinct needs that require informed, compassionate care. This series is designed to provide you with tools and knowledge to become 'oncology-informed'. Our expert panel will address the most common questions that arise in primary care, equipping you with the knowledge and tools to confidently support your patients through every stage of their journey.",
+      "NDs and integrative practitioners in general practice aim to support the whole person, not just the diagnosis. This series focuses on helping patients with a cancer diagnosis optimize their overall health and wellbeing, rather than offering direct cancer treatment. Cancer patients often have distinct needs that require informed, compassionate care. This series is designed to provide you with tools and knowledge to become \"oncology-informed\". Our expert panel will address the most common questions that arise in primary care, equipping you with the knowledge and tools to confidently support your patients through every stage of their journey.",
   },
   {
     question: "Why have NFH and Vitazan chosen to spearhead this series?",
