@@ -124,7 +124,7 @@ const HeroBanner = () => {
 </motion.div>
 
 
-            <motion.div
+            {/* <motion.div
   className="mt-4 ml-0 flex items-center gap-3 text-gray-800 text-base md:text-lg"
   initial={{ opacity: 0, y: 10 }}
   animate={{ opacity: 1, y: 0 }}
@@ -135,6 +135,28 @@ const HeroBanner = () => {
   <img src="/NFH x Vitazan.png" alt="NFH and Vitazan Logos" className="h-7 md:h-14 object-contain" />
 </a>
 
+</motion.div> */}
+<motion.div
+  className="mt-4 ml-0 flex flex-col items-start gap-2 text-gray-800 text-base md:text-lg"
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 1 }}
+>
+  <div className="flex items-center gap-3">
+    <span className="font-medium">Sponsored by</span>
+    <a href="https://nfh.ca" target="_blank" rel="noopener noreferrer">
+      <img
+        src="/NFH x Vitazan.png"
+        alt="NFH and Vitazan Logos"
+        className="h-7 md:h-14 object-contain"
+      />
+    </a>
+  </div>
+
+  <p className="text-sm md:text-base text-gray-600  max-w-xl leading-relaxed">
+    A complete learning resource for all health providers focused on <br />
+    prevention, treatment side effects, and long-term health outcomes.
+  </p>
 </motion.div>
 
 
