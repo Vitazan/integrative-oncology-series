@@ -38,14 +38,14 @@ const Footer = () => {
                   <a
                     href="https://www.facebook.com/Nutritional-Fundamentals-for-Health-Inc-935117029962456/"
                     target="_blank"
-                    className="text-gray-800 hover:text-white transition-colors"
+                    className="text-gray-800 hover:text-blue-900 transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook className="h-5 w-5" />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/nfh-inc"
-                    className="text-gray-800 hover:text-white transition-colors"
+                    className="text-gray-800 hover:text-blue-900 transition-colors"
                     target="_blank"
                     aria-label="LinkedIn"
                   >
@@ -53,7 +53,7 @@ const Footer = () => {
                   </a>
                   <a
                     href="https://www.instagram.com/nfh.supplements/"
-                    className="text-gray-800 hover:text-white transition-colors"
+                    className="text-gray-800 hover:text-pink-900 transition-colors"
                     target="_blank"
                     aria-label="Instagram"
                   >
@@ -81,14 +81,14 @@ const Footer = () => {
                   <a
                     href="https://www.facebook.com/vitazanpro/"
                     target="_blank"
-                    className="text-gray-800 hover:text-white transition-colors"
+                    className="text-gray-800 hover:text-blue-900 transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook className="h-5 w-5" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/vitazan-professional-36139514a/"
-                    className="text-gray-800 hover:text-white transition-colors"
+                    className="text-gray-800 hover:text-blue-900 transition-colors"
                     target="_blank"
                     aria-label="LinkedIn"
                   >
@@ -96,7 +96,7 @@ const Footer = () => {
                   </a>
                   <a
                     href="https://www.instagram.com/vitazanprofessional/"
-                    className="text-gray-800 hover:text-white transition-colors"
+                    className="text-gray-800 hover:text-pink-900 transition-colors"
                     target="_blank"
                     aria-label="Instagram"
                   >
