@@ -1,28 +1,26 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
-import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const RotatingText = () => {
   const phrases = [
     "Free for heathcare practitioners and students",
-    "Advanced webinar series with CE credits",
+    "Advanced webinar series with CE credits \n (pending approval)",
     "Clinically focused webinars for naturopathic doctors",
- 
-   
-  ]
+  ];
 
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length)
-    }, 4000)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 4000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="h-[3.5rem] md:h-[1.5rem] relative ">
@@ -35,18 +33,26 @@ const RotatingText = () => {
           transition={{ duration: 0.5 }}
           className="absolute"
         >
-          {phrases[currentIndex]}
+          {phrases[currentIndex].split("\n").map((line, idx) => (
+            <span key={idx} className="block">
+              {line}
+            </span>
+          ))}
         </motion.span>
       </AnimatePresence>
     </div>
-  )
-}
+  );
+};
 
 const HeroBanner = () => {
   return (
     <section className="relative bg-gradient-to-r from-emerald-50 to-gray-50 overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-65">
-        <img src="/herobanner2.jpg" alt="" className="w-full h-full object-cover" />
+        <img
+          src="/herobanner2.jpg"
+          alt=""
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <div className="container relative z-10 py-20 md:py-32">
@@ -59,7 +65,9 @@ const HeroBanner = () => {
           >
             {/* <span className="text-emerald-600">Free</span> Integrative Oncology{" "} */}
             {/* <span style={{ color: "#0a3371" }}>Free </span>  */}
-            <span style={{ color: "#0a3371" }}>Integrative Oncology Series</span>
+            <span style={{ color: "#0a3371" }}>
+              Integrative Oncology Series
+            </span>
           </motion.h1>
 
           <motion.div
@@ -68,10 +76,7 @@ const HeroBanner = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            
-              <RotatingText />
-            
-            
+            <RotatingText />
           </motion.div>
 
           <motion.div
@@ -82,9 +87,9 @@ const HeroBanner = () => {
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
-  style={{ backgroundColor: "#90b73e" }}
-  className="hover:opacity-90 px-6 py-3 text-lg text-black"
->
+                style={{ backgroundColor: "#90b73e" }}
+                className="hover:opacity-90 px-6 py-3 text-lg text-black"
+              >
                 <Link href="/#webinars">View Schedule</Link>
               </Button>
             </motion.div>
@@ -96,35 +101,33 @@ const HeroBanner = () => {
           </motion.div>
 
           <motion.div
-  className="mt-12 flex flex-col sm:flex-row items-center sm:items-start sm:space-x-4 text-center sm:text-left"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7, delay: 0.6 }}
->
-  <div className="flex justify-center sm:justify-start -space-x-4 mb-4 sm:mb-0">
-    {[1, 2, 3, 4, 5].map((i) => (
-      <motion.img
-        key={i}
-        src={`/speakers/speaker${i}.jpg`}
-        alt={`Speaker ${i}`}
-        className="w-12 h-12 rounded-full border-2 border-white"
-        initial={{ opacity: 0, x: -10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
-      />
-    ))}
-  </div>
+            className="mt-12 flex flex-col sm:flex-row items-center sm:items-start sm:space-x-4 text-center sm:text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+          >
+            <div className="flex justify-center sm:justify-start -space-x-4 mb-4 sm:mb-0">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <motion.img
+                  key={i}
+                  src={`/speakers/speaker${i}.jpg`}
+                  alt={`Speaker ${i}`}
+                  className="w-12 h-12 rounded-full border-2 border-white"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+                />
+              ))}
+            </div>
 
-  <p className="text-gray-800 font-medium text-sm sm:text-base">
-    <span className="font-semibold block sm:inline">
-      5 expert speakers from September 2025 – <br/> February 2026
-    </span>
-   
-  </p>
-</motion.div>
+            <p className="text-gray-800 font-medium text-sm sm:text-base">
+              <span className="font-semibold block sm:inline">
+                5 expert speakers from September 2025 – <br /> February 2026
+              </span>
+            </p>
+          </motion.div>
 
-
-            {/* <motion.div
+          {/* <motion.div
   className="mt-4 ml-0 flex items-center gap-3 text-gray-800 text-base md:text-lg"
   initial={{ opacity: 0, y: 10 }}
   animate={{ opacity: 1, y: 0 }}
@@ -136,35 +139,38 @@ const HeroBanner = () => {
 </a>
 
 </motion.div> */}
-<motion.div
-  className="mt-4 ml-0 flex flex-col items-start gap-2 text-gray-800 text-base md:text-lg"
-  initial={{ opacity: 0, y: 10 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5, delay: 1 }}
->
-  <div className="flex items-center gap-3">
-    <span className="font-medium">Sponsored by</span>
-    <a href="https://nfh.ca" target="_blank" rel="noopener noreferrer">
-      <img
-        src="/NFH x Vitazan.png"
-        alt="NFH and Vitazan Logos"
-        className="h-7 md:h-14 object-contain"
-      />
-    </a>
-  </div>
+          <motion.div
+            className="mt-4 ml-0 flex flex-col items-start gap-2 text-gray-800 text-base md:text-lg"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+          >
+            <div className="flex items-center gap-3">
+              <span className="font-medium">Sponsored by</span>
+              <a
+                href="https://nfh.ca"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/NFH x Vitazan.png"
+                  alt="NFH and Vitazan Logos"
+                  className="h-7 md:h-14 object-contain"
+                />
+              </a>
+            </div>
 
-  <p className="text-sm md:text-base text-gray-600  max-w-xl leading-relaxed">
-    A complete learning resource for all health providers focused on <br />
-    prevention, treatment of side effects, and long-term health outcomes.
-  </p>
-</motion.div>
-
-
-
+            <p className="text-sm md:text-base text-gray-600  max-w-xl leading-relaxed">
+              A complete learning resource for all health providers focused on{" "}
+              <br />
+              prevention, treatment of side effects, and long-term health
+              outcomes.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroBanner 
+export default HeroBanner;
