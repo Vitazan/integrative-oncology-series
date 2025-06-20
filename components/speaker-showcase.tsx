@@ -33,7 +33,7 @@ const SpeakerShowcase = () => {
 
               {webinar && (
                 <div className="bg-gray-50 p-4 rounded-lg mt-4">
-                  <h4 className="font-bold text-gray-800 text-sm mb-2">Upcoming Webinar:</h4>
+                  <h4 className="font-bold text-gray-800 text-sm mb-2">Upcoming Webinar</h4>
                   <p className="text-emerald-700 font-medium mb-2">{webinar.title}</p>
                   <div className="flex flex-wrap gap-4 text-xs text-gray-600 mb-3">
                     <div className="flex items-center">
