@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import HeroBanner from "@/components/hero-banner";
 import WebinarList from "@/components/webinar-list";
 import FaqPreview from "@/components/faq-preview";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
 export default function Home() {
   return (
@@ -103,7 +104,7 @@ export default function Home() {
                   <span className="font-semibold">
                     Gain the knowledge to deliver{" "}
                   </span>{" "}
-                  the most effective posttreatment strategies
+                  the most effective post-treatment strategies
                 </p>
               </li>
               <li className="flex items-start">
@@ -136,7 +137,7 @@ export default function Home() {
               </span>
               , featuring five renowned experts, each delivering a powerful
               one-hour lecture{" "}
-              <span className="bg-yellow-200 px-1 rounded-sm font-semibold text-gray-900">
+              <span className=" px-1 rounded-sm font-semibold text-[#0a3371]">
                 followed by a 30-minute Q&amp;A
               </span>
               .
@@ -160,9 +161,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <TestimonialsCarousel/>
 
       <WebinarList />
-
+    
       <FaqPreview />
       {/* 
       <section className="container ">

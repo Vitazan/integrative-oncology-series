@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 const WebinarList = () => {
   return (
-    <section id="webinars" className="bg-gray-50 py-16 md:py-24">
+    <section id="webinars" className="bg-gray py-16 md:py-24">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
