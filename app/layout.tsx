@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Integrative Oncology Series",
     images: [
       {
-        url: "/logosupdown.webp",
+        url: "/meta.webp",
         width: 1200,
         height: 630,
         alt: "Integrative Oncology Series Logo",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     title: "Integrative Oncology Webinar Series | Vitazan Professional & NFH",
     description:
       "Explore integrative approaches to oncology with leading experts. Register for our free webinar series featuring top naturopathic doctors, clinical researchers, and practical strategies for patient care.",
-    images: ["/logosupdown.webp"],
+    images: ["/meta.webp"],
   },
   icons: {
     icon: "/favicon.ico",
