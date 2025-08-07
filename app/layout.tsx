@@ -9,12 +9,39 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Integrative Oncology Webinar Series | Vitazan Professional & NFH",
+  metadataBase: new URL("https://integrative-oncology-series.com"),
+  title: {
+    default: "Integrative Oncology Webinar Series | Vitazan Professional & NFH",
+    template: `%s | Integrative Oncology Webinar Series`,
+  },
   description:
     "Explore integrative approaches to oncology with leading experts. Register for our free webinar series featuring top naturopathic doctors, clinical researchers, and practical strategies for patient care.",
-  generator: "Vitazan Professional",
+  applicationName: "Integrative Oncology Series",
+  referrer: "origin-when-cross-origin",
   keywords: [
-    "integrative oncology", "webinar", "naturopathic medicine", "cancer care", "functional medicine", "Vitazan", "NFH", "natural health", "oncology series", "doctor webinar", "clinical research"
+    "integrative oncology",
+    "webinar",
+    "naturopathic medicine",
+    "cancer care",
+    "functional medicine",
+    "Vitazan",
+    "NFH",
+    "natural health",
+    "oncology series",
+    "doctor webinar",
+    "clinical research",
+  ],
+  authors: [{ name: "Vitazan Professional" }, { name: "NFH" }],
+  creator: "Vitazan Professional & NFH",
+  publisher: "Vitazan Professional & NFH",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   openGraph: {
     title: "Integrative Oncology Webinar Series | Vitazan Professional & NFH",
@@ -27,19 +54,35 @@ export const metadata: Metadata = {
         url: "/logosupdown.webp",
         width: 1200,
         height: 630,
-        alt: "Integrative Oncology Series Logo"
-      }
+        alt: "Integrative Oncology Series Logo",
+      },
     ],
     locale: "en_US",
-    type: "website"
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   twitter: {
     card: "summary_large_image",
     title: "Integrative Oncology Webinar Series | Vitazan Professional & NFH",
     description:
       "Explore integrative approaches to oncology with leading experts. Register for our free webinar series featuring top naturopathic doctors, clinical researchers, and practical strategies for patient care.",
-    images: ["/logosupdown.webp"]
-  }
+    images: ["/logosupdown.webp"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

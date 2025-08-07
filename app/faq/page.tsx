@@ -5,6 +5,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Frequently Asked Questions",
+  description: "Find answers to common questions about our Integrative Oncology Webinar Series.",
+}
 
 export default function FaqPage() {
   return (
