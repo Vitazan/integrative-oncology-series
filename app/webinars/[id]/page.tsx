@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const speaker = getSpeakerByWebinarId(id);
-  const imageUrl = speaker?.image || "/logosupdown.webp";
+  const imageUrl = speaker?.image || "/meta.webp";
 
   return {
     title: webinar.title,
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: webinar.title,
       description: webinar.description,
-      url: `https://integrative-oncology-series.com/webinars/${id}`,
+      url: `https://ndwebinars.com/webinars/${id}`,
       images: [
         {
           url: imageUrl,
