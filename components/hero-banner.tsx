@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 const RotatingText = () => {
   const phrases = [
     "Free for healthcare practitioners and students",
-    "Advanced webinar series with CE credits \n (pending approval)",
+    "Advanced webinar series with CE credits",
     "Clinically focused webinars for naturopathic doctors",
   ];
 
