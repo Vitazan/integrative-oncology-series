@@ -55,7 +55,7 @@ export default function FaqPageClient() {
         >
           <p className="text-lg text-gray-600 mb-6">Don't see your question answered here? Contact us directly.</p>
           <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-            <Link href="mailto:info@newrootsherbal.com">Contact Us</Link>
+            <Link href="mailto:info@nfh.ca">Contact Us</Link>
           </Button>
         </motion.div>
       </section>

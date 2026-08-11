@@ -154,10 +154,10 @@ const Footer = () => {
               <li className="flex items-center text-gray-800">
                 <Mail className="h-5 w-5 mr-2" />
                 <a
-                  href="mailto:info@vitazan.com"
+                  href="mailto:info@nfh.ca"
                   className="hover:text-blue-400  transition-colors"
                 >
-                  info@nfh.com
+                  info@nfh.ca
                 </a>
               </li>
               <li className="flex items-center text-gray-800">
