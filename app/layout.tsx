@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Join our expert-led webinar series on integrative approaches to oncology, featuring leading naturopathic doctors and researchers.",
     url: "https://ndwebinars.com/",
     siteName: "Integrative Oncology Series",
-    images: ["/meta.webp"],
+    images: ["/banner.webp"],
     locale: "en_US",
     type: "website",
   },
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "Integrative Oncology Webinar Series | Vitazan Professional & NFH",
     description:
       "Explore integrative approaches to oncology with leading experts. Register for our free webinar series featuring top naturopathic doctors, clinical researchers, and practical strategies for patient care.",
-    images: ["/meta.webp"],
+    images: ["/banner.webp"],
   },
   icons: {
     icon: "/favicon.ico",
