@@ -133,12 +133,12 @@ export default function Home() {
             <p className="text-lg text-gray-600 mb-8">
               Join us for this highly anticipated{" "}
               <span style={{ color: "#0a3371" }} className="font-semibold">
-                second edition
+                third edition
               </span>
-              , featuring five renowned experts, each delivering a powerful
+              , featuring six renowned experts, each delivering a powerful
               one-hour lecture{" "}
               <span className=" px-1 rounded-sm font-semibold text-[#0a3371]">
-                followed by a 30-minute Q&amp;A
+                with Q&amp;A
               </span>
               .
             </p>

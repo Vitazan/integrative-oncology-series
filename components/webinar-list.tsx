@@ -9,7 +9,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Calendar, Clock, ChevronRight } from "lucide-react";
-import { webinars, getSpeakerByWebinarId } from "@/lib/data";
+import { webinars, getSpeakersByWebinarId } from "@/lib/data";
 import { motion } from "framer-motion";
 
 const WebinarList = () => {
@@ -26,8 +26,8 @@ const WebinarList = () => {
             Schedule
           </h2>
           <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Join our expert naturopathic doctors from September 2025 to February
-            2026 for insightful discussions on integrative oncology approaches.
+            Join our expert naturopathic doctors from September 2026 to January
+            2027 for insightful discussions on integrative oncology approaches.
             All webinars are free and open to integrative healthcare
             practitioners and students.
           </p>
@@ -35,7 +35,8 @@ const WebinarList = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {webinars.map((webinar, index) => {
-            const speaker = getSpeakerByWebinarId(webinar.id);
+            const webinarSpeakers = getSpeakersByWebinarId(webinar.id);
+            const speaker = webinarSpeakers[0];
 
             return (
               <motion.div
@@ -48,23 +49,30 @@ const WebinarList = () => {
                 <Card className="flex flex-col h-full transition-all duration-300 hover:shadow-lg overflow-hidden">
                   <div className="grid grid-cols-1 md:grid-cols-3 h-full">
                     {/* Speaker Image Column */}
-                    {speaker && (
+                    {webinarSpeakers.length > 0 && (
                       <div
                         style={{ backgroundColor: "rgba(144, 183, 62, 0.2)" }} // 80% opacity
-                        className="md:col-span-1 bg-emerald-50 flex items-center justify-center p-4"
+                        className="md:col-span-1 bg-emerald-50 flex flex-wrap items-center justify-center gap-2 p-4"
                       >
-                        <div className="relative w-full aspect-square max-w-[180px] overflow-hidden rounded-full border-4 border-white shadow-md">
+                        {webinarSpeakers.map((s) => (
                           <Link
+                            key={s.id}
                             href={`/webinars/${webinar.id}`}
-                            className="flex items-center"
+                            title={s.name}
+                            className={`relative block aspect-square overflow-hidden rounded-full border-4 border-white shadow-md ${
+                              webinarSpeakers.length > 1
+                                ? "w-[45%] max-w-[110px]"
+                                : "w-full max-w-[180px]"
+                            }`}
                           >
                             <img
-                              src={speaker.image || "/placeholder.svg"}
-                              alt={speaker.name}
+                              src={s.image || "/placeholder.svg"}
+                              alt={s.name}
+                              style={{ objectPosition: s.imagePosition }}
                               className="w-full h-full object-cover"
                             />
                           </Link>
-                        </div>
+                        ))}
                       </div>
                     )}
 
@@ -82,6 +90,15 @@ const WebinarList = () => {
                             <Clock className="h-4 w-4" />
                             <span className="text-sm">{webinar.time}</span>
                           </div>
+                          <span
+                            className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                              webinar.ceAccredited
+                                ? "bg-[#90b73e]/20 text-[#3f5417]"
+                                : "bg-gray-200 text-gray-700"
+                            }`}
+                          >
+                            {webinar.ceAccredited ? "CE accredited" : "Non-CE"}
+                          </span>
                         </div>
                       </CardHeader>
 
@@ -102,7 +119,9 @@ const WebinarList = () => {
                               className="group"
                             >
                               <h4 className="text-base font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-200">
-                                {speaker.name}, {speaker.credentials}
+                                {webinarSpeakers
+                                  .map((s) => `${s.name}, ${s.credentials}`)
+                                  .join("  &  ")}
                               </h4>
                             </Link>
 
@@ -127,18 +146,31 @@ const WebinarList = () => {
                           </Link>
                         </Button>
 
-                        <Button
-                          style={{ backgroundColor: "rgba(144, 183, 62, 0.8)" }}
-                          className="hover:text-gray-50 text-black"
-                        >
-                          <a
-                            href={webinar.registrationLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        {webinar.registrationLink ? (
+                          <Button
+                            asChild
+                            style={{
+                              backgroundColor: "rgba(144, 183, 62, 0.8)",
+                            }}
+                            className="hover:text-gray-50 text-black"
                           >
-                            Register Now
-                          </a>
-                        </Button>
+                            <a
+                              href={webinar.registrationLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Register Now
+                            </a>
+                          </Button>
+                        ) : (
+                          <Button
+                            disabled
+                            variant="outline"
+                            className="text-gray-500"
+                          >
+                            Registration opening soon
+                          </Button>
+                        )}
                       </CardFooter>
                     </div>
                   </div>

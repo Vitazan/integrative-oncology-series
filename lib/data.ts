@@ -8,6 +8,10 @@ export type Speaker = {
   research: string;
   webinarId: string;
   image: string;
+  /** CSS object-position for the circular crop, when the subject is off-centre. */
+  imagePosition?: string;
+  /** Controls whether this speaker appears in the homepage hero speaker row. */
+  featuredOnHomepage: boolean;
 };
 
 export type Webinar = {
@@ -17,9 +21,11 @@ export type Webinar = {
   shortDescription: string;
   date: string;
   time: string;
-  speakerId: string;
+  /** First entry is the primary speaker (used for the homepage and card lead). */
+  speakerIds: string[];
+  ceAccredited: boolean;
   registrationLink: string;
-  learningObjectives: string[]; // ✅ optional
+  learningObjectives: string[];
   details: {
     cost: string;
     audience: string;
@@ -34,197 +40,277 @@ export type FAQ = {
 
 export const speakers: Speaker[] = [
   {
-    id: "dr-paul-a",
-    name: "Dr Paul Anderson",
-    title: "ND",
-    credentials: "ND",
-    bio: "Dr Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. In addition to three decades clinical experience, he also was head of the interventional arm of a US-NIH funded human research trial using IV and integrative therapies in cancer patients. He founded Advanced Medical Therapies in Seattle, Washington, a clinic focusing on cancer and chronic diseases and now focuses his time in collaboration with clinics and hospitals in the US and other countries.",
-    biohtml: `
-  <p>
-    Dr Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. 
-    In addition to over 30 years of clinical experience, he led the interventional arm of a 
-    <strong>US-NIH funded human research trial</strong> using IV and integrative therapies in cancer patients.
-  </p>
-
-  <p>
-    He founded <strong>Advanced Medical Therapies</strong> in Seattle, Washington, a clinic specializing in cancer and chronic disease. 
-    He now collaborates with clinics and hospitals across the United States and internationally.
-  </p>
-
-  <p>
-    Former academic positions include posts at multiple medical schools, <strong>Professor of Pharmacology and Clinical Medicine</strong> at 
-    <a href="https://bastyr.edu" target="_blank" rel="noopener noreferrer" class=" underline">Bastyr University</a>, and <strong>Chief of IV Services</strong> at the Bastyr Oncology Research Center.
-  </p>
-
-  <p>
-    Dr Anderson is coauthor of the Hay House book <strong>
-    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" text-blue-600 underline">“Outside the Box Cancer Therapies”</a> </strong>with Dr Mark Stengler, and contributed to the anthology 
-    <strong><a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class=" underline">“Success Breakthroughs”</a></strong> with Jack Canfield, and 
-    <strong>Cancer… The Journey from Diagnosis to Empowerment</strong> by Lioncrest Publishing.
-  </p>
-
-  <p>
-    He is also coauthor of the IV therapy textbook 
-    <strong>“A Scientific Reference for Intravenous Nutrient Therapy”</strong> with Drs. Osborne and Carter.
-  </p>
-
-  <p>
-    A frequent CME speaker and educator, Dr Anderson has expanded his reach through his online CE platform 
-    <strong><a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer"  className="text-[#97c851] underline">ConsultDrA.com</a> </strong>
-    and through his <strong>Advanced Applications in Medical Practice (AAMP)</strong> conferences, which deliver cutting-edge clinical education in a CME-accredited format.
-  </p>
-`,
-
-    research: "Dr Paul Anderson",
-    webinarId: "nutritional-strategies",
-    image: "/speakers/speaker1.jpg",
-  },
-  {
-    id: "dr-paul-s",
-    name: "Dr Paul Saunders",
-    title: "ND, PhD, RHOM",
-    credentials: "ND, PhD, RHOM ",
-    bio: "Dr Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
-    biohtml: `
-      Dr Saunders is an accomplished professional with dual ND degrees from the 
-      <a href="https://www.ccnm.edu" target="_blank">Canadian College of Naturopathic Medicine</a> and the National College in Portland.
-      His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.
-
-      He held roles as <strong>Clinic Director</strong> and <strong>Associate Dean</strong> at CCNM, and continues to 
-      educate and publish as an <strong>Adjunct Professor</strong> at the 
-      <a href="https://www.nuhs.edu" target="_blank">National University of Health Sciences</a>.
-
-      He is involved with <a href="https://www.nih.gov" target="_blank">NIH</a>, and was twice named 
-    Ontario Naturopathic Doctor of the Year. He also advised 
- Health Canada’s Natural Health Products Directorate.
-    `,
-    research: "Herbal medicine safety and efficacy in cancer care",
-    webinarId: "herbal-medicine",
-    image: "/speakers/speaker2.jpg",
-  },
-  {
     id: "dr-neil",
     name: "Dr Neil McKinney",
-    title: "ND (nonpracticing)",
-    credentials: "ND (nonpracticing)",
-    bio: "Dr McKinney has a BSc in biosciences from Simon Fraser University, studied kinesiology at the University of Waterloo, and received a Doctor of Naturopathic Medicine from National College of Naturopathic Medicine (1985). ",
+    title: "BSc, ND (non-practicing)",
+    credentials: "BSc, ND (non-practicing)",
+    bio: "Dr McKinney has a BSc in biosciences from Simon Fraser University, studied kinesiology at the University of Waterloo, and received a Doctor of Naturopathic Medicine from National College of Naturopathic Medicine (1985).",
     biohtml: `
   <p>
-    Dr McKinney holds a <strong>BSc in biosciences</strong> from 
+    Dr McKinney holds a <strong>BSc in biosciences</strong> from
     <a href="https://www.sfu.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">Simon Fraser University</a>,
     studied kinesiology at the <a href="https://uwaterloo.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-    University of Waterloo</a>, and earned his <strong>Doctorate of Naturopathic Medicine</strong> from the 
+    University of Waterloo</a>, and earned his <strong>Doctorate of Naturopathic Medicine</strong> from the
     <a href="https://nunm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
     National College of Naturopathic Medicine</a> in 1985.
   </p>
 
   <p>
-    Dr McKinney also completed three years of Traditional Chinese Medicine training at the 
-    Oregon College of Oriental Medicine. His background includes several years of experience in cancer research, 
+    Dr McKinney also completed three years of Traditional Chinese Medicine training at the
+    Oregon College of Oriental Medicine. His background includes several years of experience in cancer research,
     particularly in the areas of <strong>novel radiation therapies</strong> and <strong>radiosensitizing drugs</strong>.
   </p>
 
   <p>
-    A recognized leader in the profession, he served in regulatory roles including as <strong>Registrar of the 
-    College of Naturopathic Physicians of British Columbia (CNPBC)</strong>, and has received multiple awards for his 
+    A recognized leader in the profession, he served in regulatory roles including as <strong>Registrar of the
+    College of Naturopathic Physicians of British Columbia (CNPBC)</strong>, and has received multiple awards for his
     contributions in advancing the scope and standards of naturopathic medicine.
   </p>
 
   <p>
-    Dr McKinney is the founder of both the 
+    Dr McKinney is the founder of both the
     <a href="https://www.bcna.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-    BC Naturopathic Association</a> and the 
+    BC Naturopathic Association</a> and the
     <a href="https://binm.org" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-    Boucher Institute of Naturopathic Medicine</a>. He is a former <strong>Professor of Naturopathic Oncology</strong> and 
+    Boucher Institute of Naturopathic Medicine</a>. He is a former <strong>Professor of Naturopathic Oncology</strong> and
     the author of six textbooks on the subject.
   </p>
 
   <p>
-    He continues to <strong>mentor and lecture</strong> to naturopathic doctors around the world, contributing 
-    to professional publications and public education. Now retired from decades of clinical practice with a focus 
-    on integrative oncology, Dr McKinney remains actively engaged in 
+    He continues to <strong>mentor and lecture</strong> to naturopathic doctors around the world, contributing
+    to professional publications and public education. Now retired from decades of clinical practice with a focus
+    on integrative oncology, Dr McKinney remains actively engaged in
     <strong>cancer research, professional education,</strong> and publishing.
   </p>
 `,
-    research: "Microbiome modulation for cancer immunotherapy support",
-    webinarId: "microbiome-cancer",
+    research: "Botanical medicine and naturopathic oncology",
+    webinarId: "baicalin-immune-regulation",
     image: "/speakers/speaker3.jpg",
-  },
-  {
-    id: "dr-eric",
-    name: "Dr Eric Marsden",
-    title: "ND",
-    credentials: "ND",
-    bio: "Dr Marsden obtained his undergraduate degree in human biology at the University of Toronto and graduated from the Canadian College of Naturopathic Medicine in 2002. ",
-    biohtml: `
-  <p>
-    Dr Marsden is a leading expert in integrative and naturopathic medicine with a focus on cancer care, IV therapy, and chronic disease. He is the founder of the Marsden Centre for Excellence in Integrative Medicine, a multidisciplinary clinic dedicated to evidence-informed care. With over 20 years of experience, Dr Marsden has trained healthcare providers across North America and established Canada’s first naturopathic oncology residency. A published researcher and frequent speaker, he is passionate about advancing integrative medicine through clinical innovation, education, and ongoing research.
-  </p>
-`,
-    research: "Stress reduction techniques and cancer outcomes",
-    webinarId: "mind-body-approaches",
-    image: "/speakers/speaker4.jpg",
+    featuredOnHomepage: true,
   },
   {
     id: "dr-dugald",
     name: "Dr Dugald Seely",
-    title: "ND, MSc",
-    credentials: "ND, MSc",
-    bio: "Dr Seely is a naturopathic doctor and clinician scientist, specializing in integrative cancer care. Dr Seely blends evidence-based approaches in clinical practice and is active in the conduct of synthesis and clinical research ",
+    title: "ND, MSc, FABNO",
+    credentials: "ND, MSc, FABNO",
+    bio: "Dr Seely has been actively pursuing the growth and development of integrative medicine and its evidence base over the past two decades, pioneering an innovative model of cancer care and research through the creation of the Ottawa Integrative Cancer Centre.",
     biohtml: `
   <p>
-    Dr Seely is a naturopathic doctor and clinician scientist with a specialization in 
-    integrative cancer care. He is known for blending evidence-based medicine with 
-    naturopathic principles, both in clinical settings and in the realm of research.
+    Dr Seely has been actively pursuing the growth and development of integrative medicine and its evidence base
+    over the past two decades. Having pioneered an innovative model of cancer care and research through the creation
+    of the <strong>Ottawa Integrative Cancer Centre</strong> in 2011, Dr Seely expanded the clinic through the founding of the
+    <strong>Centre for Health Innovation (CHI)</strong> in 2020. Most recently he expanded the reach of the clinic in
+    partnership with EnviroMed in downtown Toronto to provide high quality care to people in the Greater Toronto Area.
   </p>
 
   <p>
-    Dr Seely is the <strong>CEO</strong> of the <strong>Centre for Health Innovation (CHI)</strong> and the 
-    <strong>Executive Director</strong> of the <strong>Patterson Institute for Integrative Oncology Research</strong>, 
-    where he is pioneering an evidence-informed, integrative oncology model that combines conventional and naturopathic care.
+    Dr Seely and his team provide naturopathic medicine and whole-person integrative care to people living with chronic
+    disease in a manner that is reflective of the best evidence available, deep clinical experience, and an essential
+    honouring of patient choice.
   </p>
 
   <p>
-    A 2003 graduate of the 
-    <strong><a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-      Canadian College of Naturopathic Medicine (CCNM)</a></strong>, Dr Seely brings over 20 years of clinical experience to his practice.
-    He has <strong>published more than 100 peer-reviewed papers and book chapters</strong> and has led a thriving, 
-    <strong>multidisciplinary clinic</strong> in Ottawa for the past 12 years.
+    He completed his <strong>BSc in chemistry</strong> at Acadia University and an <strong>MSc in cancer research</strong> at the
+    University of Toronto. A 2003 graduate of the
+    <a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
+    Canadian College of Naturopathic Medicine</a>, Dr Seely is a <strong>Fellow of the American Board of Naturopathic
+    Oncology (FABNO)</strong>. As a clinician scientist, he has been awarded over <strong>11 million dollars</strong> in
+    competitive grant and trainee funding through CIHR, the Lotte and John Hecht Memorial Foundation, CBCRA, the
+    SickKids Foundation, and the Gateway for Cancer Research.
   </p>
 
   <p>
-    In addition to his clinical and academic contributions, Dr Seely is also passionate about the 
-    <strong>business of integrative medicine</strong> and enjoys sharing insights into both clinical excellence and 
-    the successful operation of healthcare practices.
+    Dr Seely leads the <strong>Patterson Institute for Integrative Oncology Research</strong> at CCNM. He is an
+    <strong>Adjunct Professor</strong> with the Faculty of Medicine at the University of Ottawa, is an Affiliate Investigator
+    with the Ottawa Hospital Research Institute (OHRI), and was Past President for the Oncology Association of
+    Naturopathic Physicians (OncANP).
+  </p>
+
+  <p>
+    In 2017 Dr Seely was the recipient of the <strong>Dr Rogers Prize</strong> for excellence in Complementary and
+    Alternative Medicine.
+  </p>
+
+  <p>
+    Father of two, Dr Seely is an avid runner, reader, and seeker of knowledge and meaningful connection in a
+    rapidly changing world.
   </p>
 `,
-    research: "Mapping the Future: Next-Gen Tools for Personalized Cancer Care",
-    webinarId: "lifestyle-medicine",
+    research: "Integrative oncology research and clinical innovation",
+    webinarId: "ndmaps-product-insights",
     image: "/speakers/speaker5.jpg",
+    featuredOnHomepage: true,
+  },
+  {
+    id: "dr-melanie",
+    name: "Dr Melanie Kusznireckyj",
+    title: "BSc, ND, MBA",
+    credentials: "ND, MBA",
+    bio: "Dr Kusznireckyj is a naturopathic doctor and Executive Director at NFH & Vitazan Professional, where she leads business development, clinical research, product development, and scientific education in integrative natural medicine.",
+    biohtml: `
+  <p>
+    Melanie Kusznireckyj, BSc, ND, MBA, is a naturopathic doctor and <strong>Executive Director at NFH &amp; Vitazan
+    Professional</strong>, where she leads business development, clinical research, product development, and scientific
+    education in integrative natural medicine.
+  </p>
+
+  <p>
+    A graduate of the
+    <a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
+    Canadian College of Naturopathic Medicine</a>, she also holds a <strong>BSc in Plant Biology</strong> from the
+    University of Ottawa and an <strong>MBA</strong> from Quantic School of Business and Technology. With a clinical
+    background spanning naturopathic medicine, lifestyle medicine, botanical medicine, homeopathy, and somatic-based
+    care, Melanie is passionate about translating evidence into practical healthcare solutions.
+  </p>
+
+  <p>
+    She has contributed to research with the University of Toronto and the WHO-led <strong>INTERPHONE study</strong>, and
+    currently serves as <strong>Interim President of the Quebec Association of Naturopathic Medicine</strong>, while
+    supporting women's health advocacy through the Réseau Québécois d'Action pour la Santé des Femmes. Melanie enjoys
+    Argentine Tango, writing, cooking, and travel.
+  </p>
+`,
+    research: "Clinical research, product development, and scientific education",
+    webinarId: "ndmaps-product-insights",
+    image: "/speakers/Melanie-188.jpg",
+    // Portrait source with the subject high in frame; crop from the top.
+    imagePosition: "center top",
+    featuredOnHomepage: false,
+  },
+  {
+    id: "dr-michael",
+    name: "Dr Michael Traub",
+    title: "ND",
+    credentials: "ND",
+    bio: "Dr Traub is a diplomate of the Homeopathic Academy of Naturopathic Physicians and a fellow of the American Board of Naturopathic Oncology. He has been medical director of Lokahi Health Center in Hawaii since 1986 and is now medical director of Hawaii Integrative Oncology.",
+    biohtml: `
+  <p>
+    Dr Traub received a <strong>BS from the University of California, Irvine</strong> in 1976, graduated from NCNM in 1981,
+    and completed a two-year residency there in Family Practice and Homeopathy. He is a diplomate of the
+    <strong>Homeopathic Academy of Naturopathic Physicians (HANP)</strong>, a fellow of the
+    <strong>American Board of Naturopathic Oncology (ABNO)</strong>, and currently volunteers as Treasurer of the
+    American Association of Naturopathic Physicians.
+  </p>
+
+  <p>
+    Dr Traub served as <strong>AANP President from 2001–2003</strong> and in 2006 received the
+    <strong>AANP Physician of the Year Award</strong>. He is the author of
+    <strong>“Dermatological Diagnosis and Integrative Therapeutics.”</strong>
+  </p>
+
+  <p>
+    Dr Traub has been medical director of <strong>Lokahi Health Center</strong> in Kailua Kona, Hawaii since 1986 and is
+    now medical director of <strong>Hawaii Integrative Oncology</strong>.
+  </p>
+`,
+    research: "Medicinal mushrooms and integrative oncology",
+    webinarId: "medicinal-mushrooms-oncology",
+    // Space in the filename is percent-encoded so the URL is unambiguous.
+    image: "/speakers/Michael%20Traub.jpg",
+    featuredOnHomepage: true,
+  },
+  {
+    id: "dr-paul-s",
+    name: "Dr Paul Saunders",
+    title: "ND, PhD",
+    credentials: "ND, PhD",
+    bio: "Dr Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.",
+    biohtml: `
+      Dr Saunders is an accomplished professional with dual ND degrees from the
+      <a href="https://www.ccnm.edu" target="_blank">Canadian College of Naturopathic Medicine</a> and the National College in Portland.
+      His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.
+
+      He held roles as <strong>Clinic Director</strong> and <strong>Associate Dean</strong> at CCNM, and continues to
+      educate and publish as an <strong>Adjunct Professor</strong> at the
+      <a href="https://www.nuhs.edu" target="_blank">National University of Health Sciences</a>.
+
+      He is involved with <a href="https://www.nih.gov" target="_blank">NIH</a>, and was twice named
+    Ontario Naturopathic Doctor of the Year. He also advised
+ Health Canada’s Natural Health Products Directorate.
+    `,
+    research: "Botanical and nutraceutical research in integrative oncology",
+    webinarId: "botanical-nutraceutical-updates",
+    image: "/speakers/speaker2.jpg",
+    featuredOnHomepage: true,
+  },
+  {
+    id: "dr-jj",
+    name: "Dr Jean-Jacques Dugoua",
+    title: "HBSc, ND, PhD",
+    credentials: "HBSc, ND, PhD",
+    bio: "Dr Jean-Jacques Dugoua, or Dr JJ as he is affectionately known, is a naturopathic doctor, clinical pharmacologist and researcher. He is the Chief Medical Officer of the Liberty Clinic in downtown Toronto.",
+    biohtml: `
+  <p>
+    Dr Jean-Jacques Dugoua, or <strong>Dr JJ</strong> as he is affectionately known, is a naturopathic doctor, clinical
+    pharmacologist and researcher. He is the <strong>Chief Medical Officer of the Liberty Clinic</strong> in downtown
+    Toronto and the first Naturopathic Doctor (ND) to practice at the Toronto Western Hospital Artist Health Center.
+  </p>
+
+  <p>
+    He has done research with the <strong>Motherisk Program at Sick Kids Hospital</strong> and was an
+    <strong>Associate Professor (Status-Only)</strong> at the University of Toronto Leslie Dan Faculty of Pharmacy.
+  </p>
+
+  <p>
+    Dr JJ completed his <strong>PhD in Pharmacy Sciences</strong> at the University of Toronto. He is a co-author of two
+    textbooks and has many peer-reviewed scientific publications, and is a world expert on natural health products
+    pharmacology and pregnancy safety. Dr JJ is an avid public speaker, including presentations at the
+    <strong>World Health Organization</strong> in Washington DC.
+  </p>
+`,
+    research: "Natural health product pharmacology and safety",
+    webinarId: "chemotherapy-induced-neuropathy",
+    image: "/speakers/Dr_JJ-0017.jpg",
+    // Landscape source; the subject sits left of centre, so bias the crop left.
+    imagePosition: "left center",
+    featuredOnHomepage: true,
+  },
+  {
+    id: "dr-leanna",
+    name: "Dr Leanna Standish",
+    title: "ND",
+    credentials: "ND",
+    bio: "Dr Standish is a neuroscientist and physician specializing in oncology. She is Co-Director of AIMS Institute in Seattle and also on the faculty at University of Washington and Sonoran University.",
+    biohtml: `
+  <p>
+    Dr Standish is a <strong>neuroscientist and physician specializing in oncology</strong>. She is
+    <strong>Co-Director of AIMS Institute</strong> in Seattle and also on the faculty at the
+    <strong>University of Washington</strong> and <strong>Sonoran University</strong>.
+  </p>
+`,
+    research: "Liquid biopsy and circulating tumour DNA in breast cancer",
+    webinarId: "liquid-biopsy-breast-cancer",
+    image: "/speakers/LJ.jpg",
+    // Landscape source; the subject sits left of centre, so bias the crop left.
+    imagePosition: "28% center",
+    featuredOnHomepage: true,
   },
 ];
 
 export const webinars: Webinar[] = [
   {
-    id: "nutritional-strategies",
-    title: "Healing After Chemotherapy and Radiation",
+    id: "baicalin-immune-regulation",
+    title:
+      "Baicalin: An Evidence-Informed Botanical for Immune Regulation, Inflammation & Clinical Resilience",
 
-    date: "September 10, 2025 ",
-    time: "1:00 PM – 2:30 PM  EDT",
-    speakerId: "dr-paul-a",
+    date: "September 16, 2026",
+    time: "1:00 PM – 2:00 PM EDT",
+    speakerIds: ["dr-neil"],
+    ceAccredited: true,
     registrationLink:
-      "https://attendee.gotowebinar.com/register/4271114938770009180",
+      "https://attendee.gotowebinar.com/register/5440845786433151574",
 
     description:
-      "Every patient who has had standard-of-care oncology modalities employed in their case has some level of intra- or postreatment adverse effect. The purpose of this presentation is to break down the causes of these adverse effects and to assess potential restorative therapies.",
+      "Scutellaria baicalensis has a long history of use in Traditional Chinese Medicine and is increasingly recognized for its principal flavonoid, baicalin, and its role in supporting healthy inflammatory and immune responses. This session will examine the history of S. baicalensis, its major bioactive constituents, mechanisms of action, and evidence-informed clinical applications, including emerging research in integrative oncology. Practical guidance on clinical use, probable synergists, cautions, contraindications, and interactions will also be discussed, equipping healthcare practitioners with a balanced, evidence-informed perspective for incorporating this botanical into clinical practice.",
     shortDescription:
-      "Explore therapeutic strategies for mitigating adverse effects of conventional oncology care.",
+      "Examine baicalin's mechanisms, clinical applications, and cautions in integrative oncology.",
 
     learningObjectives: [
-      "Describe the basis of cytotoxic chemotherapy adverse effects",
-      "Describe the basis of radiotherapy adverse effects",
-      "Describe the effects of chemotherapy and radiation on the tumour microenvironment",
-      "Describe potential therapeutic interventions for these effects",
+      "Describe the history, molecular mechanisms and broad clinical uses of Scutellaria spp. multiple bioactive components",
+      "Discriminate when to apply this remedy to select cancers",
+      "Know when not to apply this remedy due to AEs, CIs and drug interactions",
+      "Dose this remedy correctly",
+      "Discern possible links to other, synergistic remedies, based on the suite of targets they address",
     ],
     details: {
       cost: "FREE",
@@ -233,113 +319,133 @@ export const webinars: Webinar[] = [
     },
   },
   {
-    id: "herbal-medicine",
-    title: "Phytoestrogens and Genetic Breast-Cancer Risk",
+    id: "ndmaps-product-insights",
+    title:
+      "Clinical Conversations in Integrative Oncology: NDMAPS™ Product Insights",
 
-    date: "November 19, 2025 ",
-    time: "1:00 PM – 2:30 PM  EST",
-    speakerId: "dr-paul-s",
+    date: "September 30, 2026",
+    time: "1:00 PM – 2:00 PM EDT",
+    speakerIds: ["dr-dugald", "dr-melanie"],
+    ceAccredited: false,
     registrationLink:
-      "https://attendee.gotowebinar.com/register/8281497838955474525",
+      "https://attendee.gotowebinar.com/register/7888506004421095007",
 
     description:
-      "Breast cancer can present as multiple types, with ductal, lobular, and inflammatory being the most common types seen in clinical practice. Modern pathology diagnosis include estrogen, progesterone, and HER2-receptor status and often genetic status. Genetic status results take longer to differentiate and may confirm or change the course of conventional chemotherapy and radiation treatment. This review will look at the role phytoestrogens and various plant compounds can have in the course of clinical treatment, with case examples.",
+      "What began as a conversation between colleagues at the 2020 OncANP conference became the foundation for the NDMAPS initiative. Recognizing the growing need for evidence-informed tools to support clinicians caring for patients with a personal or family history of cancer, Drs Dugald Seely and Melanie Kusznireckyj identified a significant gap in clinically relevant integrative oncology products and resources. Driven by a shared commitment to advancing patient care, they combined their clinical expertise, naturopathic principles, and premium manufacturing to develop the NDMAPS product line, a practitioner-focused collection of evidence-informed formulations designed to support integrative oncology care and other complex conditions. This webinar explores the NDMAPS product portfolio, highlighting the scientific rationale, clinical applications, and practical indications for each formulation to help practitioners confidently integrate these products into oncology-focused clinical practice.",
     shortDescription:
-      "Explore the role of phytoestrogens in breast cancer risk and treatment.",
+      "A product-focused conversation on the NDMAPS portfolio, its rationale and clinical applications.",
 
     learningObjectives: [
-      "Know the four types of endogenous estrogens and their roles as found in humans",
-      "Understand the meaning(s) of estrogenic as relates to plants",
-      "Understand the importance of equol and breast cancer",
-      "Understand the importance of lignans and breast cancer",
-      "Understand the importance of nutrients and breast cancer",
-      "Understand the role some plants can play in genetic breast cancers",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Healthcare professionals involved in oncology care",
-      format: "Live webinar with Q&A",
-    },
-  },
-  {
-    id: "microbiome-cancer",
-    title: "Prostate Cancer Update",
-
-    date: "December 10, 2025 ",
-    time: "1:00 PM - 2:30 PM EST",
-    speakerId: "dr-neil",
-    registrationLink:
-      "https://register.gotowebinar.com/register/1817335938156515166",
-
-    description:
-      "Prostate cancer (PC) is very different than any other cancer, with unique causes, diagnostic markers, drivers of proliferation, and pattern of spread. The standard of care (SOC) in orthodox urological oncology is primarily centered on control of testosterone and its receptors. These will lose effectiveness over time. Radiation, steroids, and other medical tools are primarily palliative to late-stage prostate cancers.  The standards of care from a naturopathic perspective are still evolving. The first reliable protocols were developed among ONCANP members circa 2010, followed within the decade by the inclusion of new metabolic therapies. More recent research has revealed some novel additional remedies which could transform the care of this disease.",
-    shortDescription:
-      "Explore evolving naturopathic protocols and new metabolic therapies for prostate cancer.",
-
-    learningObjectives: [
-      "Provide diet and lifestyle recommendations to prevent, slow, or hold PC",
-      "Effectively support all SOC medical therapies",
-      "Recognize the many therapeutics that naturopathic doctors have found clinically effective, as well as their limitations",
-      "Describe novel candidate agents which are supported by up-to-date preclinical research, with the understanding of their targets",
-      "Synthesize a naturopathic protocol for PC which is practical, achievable, and robust",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Naturopathic doctors and integrative oncology professionals",
-      format: "Live session with downloadable handouts",
-    },
-  },
-  {
-    id: "mind-body-approaches",
-    title: "Mapping the Future: Next-Gen Tools for Personalized Cancer Care",
-
-    date: "January 14, 2026 ",
-    time: "1:00 PM - 2:30 PM EST",
-    speakerId: "dr-eric",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/6317651324404373085",
-
-    description:
-      "The landscape of cancer care is evolving rapidly, with precision assessment tools playing a pivotal role in early detection, surveillance, and personalized treatment strategies. This lecture will explore how advanced diagnostics—ranging from liquid biopsies and genomic profiling to metabolic imaging and tumor microenvironment analysis—are reshaping oncology.",
-    shortDescription:
-      "Explore how advanced diagnostics are transforming cancer detection and care strategies.",
-
-    learningObjectives: [
-      "Screening & Early Detection – Examining cutting-edge tools such as circulating tumor DNA (ctDNA) and methylation patterns, advanced imaging techniques, and more to enhance early cancer detection",
-      "Surveillance & Monitoring – Understanding how precision diagnostics, including molecular markers, allow for real-time tracking of disease progression, early relapse, and treatment response",
-      "Therapy Selection & Personalization – Reviewing how next-generation sequencing, tumor mutational burden analysis, and pharmacogenomics are guiding targeted therapies and immunotherapy choices",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Clinicians and diagnostic professionals in oncology",
-      format: "Live presentation with Q&A",
-    },
-  },
-  {
-    id: "lifestyle-medicine",
-    title: "Off-Label Medication Use in Cancer Care",
-
-    date: "February 18, 2026 ",
-    time: "1:00 PM - 2:30 PM EST",
-    speakerId: "dr-dugald",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/4475631798118729308",
-
-    description:
-      "The off-label use of medications in cancer care is a growing practice that has garnered attention for its potential to improve patient outcomes. Off-label prescribing refers to the use of a drug for an indication, dosage, or patient population that is not specifically approved by regulatory agencies. In oncology, this practice is prevalent due to the complex nature of cancer, promotion on the internet and through social media, intriguing mechanisms to control cancer, and the limited efficacy of approved therapies particularly in more advanced disease. For integrative healthcare practitioners, understanding this approach and the evidence on which it is based is essential, as patients may present with treatments involving off-label medications and/or be keen on using these therapies as part of their care. This presentation aims to provide an overview of the role of off-label drug use in cancer care, bridging conventional and naturopathic approaches. It will explore both the scientific basis and ethical considerations of this practice, ensuring naturopathic doctors are equipped to collaborate effectively in patient-centered care.",
-    shortDescription:
-      "Understand the role, risks, and opportunities of off-label drugs in naturopathic oncology care.",
-
-    learningObjectives: [
-      "Understand the concept of off-label drug use: Define off-label prescribing in the context of oncology and outline common scenarios where it is applied",
-      "Explore clinical applications: Highlight specific examples of off-label medications used in cancer care and their mechanisms of action",
-      "Examine integrative care opportunities: Discuss how naturopathic doctors can support patients undergoing off-label treatments",
-      "Address challenges and regulations: Assess the ethical, legal, and practical considerations of off-label prescribing, ensuring patient safety and informed decision-making",
+      "Explain the NDMAPS product development and validation process, including the pre-launch clinical evaluation, evidence review, and practitioner feedback used to assess safety, tolerability, and clinical integration through case reporting",
+      "Apply NDMAPS formulations to common integrative scenarios, including: supporting treatment-related fatigue and quality of life during and after chemotherapy; supporting immune health and inflammation; addressing treatment-induced peripheral neuropathy; and supporting survivorship, recurrence risk reduction, and long-term wellness following active treatment",
     ],
     details: {
       cost: "FREE",
       audience: "Integrative and naturopathic healthcare professionals",
-      format: "Live webinar with expert insights",
+      format: "Live webinar with Q&A",
+    },
+  },
+  {
+    id: "medicinal-mushrooms-oncology",
+    title:
+      "Medicinal Mushrooms in Oncology: An Update from Recent Publications (2016–2026)",
+
+    date: "October 14, 2026",
+    time: "1:00 PM – 2:00 PM EDT",
+    speakerIds: ["dr-michael"],
+    ceAccredited: true,
+    registrationLink:
+      "https://attendee.gotowebinar.com/register/4439997735064944219",
+
+    description:
+      "Medicinal mushrooms have been used for centuries in East Asian traditional medicine and are increasingly explored as complementary agents in integrative oncology. Their bioactive constituents—primarily β-D-glucan polysaccharides, triterpenoids, and proteoglycans—demonstrate immunomodulatory, anti-inflammatory, and direct antitumor properties in preclinical models. This review synthesizes the clinical and translational evidence published from 2016 to 2026 on the role of medicinal mushrooms in cancer care.",
+    shortDescription:
+      "A decade of clinical and translational evidence on medicinal mushrooms in cancer care.",
+
+    learningObjectives: [
+      "Describe the current role of medicinal mushrooms in oncology, including key mushroom species and compounds studied in cancer care, such as PSK and psilocybin",
+      "Identify key safety considerations, contraindications, and potential drug interactions associated with medicinal mushroom use in oncology",
+      "Explain the current regulatory status of psilocybin in Canada and distinguish between authorized access pathways, including clinical trials, the Special Access Program (SAP), and historical Section 56 exemptions",
+      "Evaluate the emerging clinical evidence for psilocybin-assisted therapy in patients with cancer, including its potential effects on anxiety, depression, quality of life, pain, and existential or spiritual well-being",
+      "Discuss the evolving Canadian policy and clinical landscape for psilocybin, including the CANMAT position, compassionate access, unregulated availability, and potential future integration into oncology and palliative care",
+    ],
+    details: {
+      cost: "FREE",
+      audience: "Healthcare professionals involved in oncology care",
+      format: "Live webinar with Q&A",
+    },
+  },
+  {
+    id: "botanical-nutraceutical-updates",
+    title: "Botanical and Nutraceuticals Research Updates – Integrative Oncology",
+
+    date: "November 18, 2026",
+    time: "1:00 PM – 2:00 PM EST",
+    speakerIds: ["dr-paul-s"],
+    ceAccredited: true,
+    registrationLink:
+      "https://attendee.gotowebinar.com/register/6252759257244585304",
+
+    // Abstract and learning objectives were not supplied with the speaker copy.
+    description: "",
+    shortDescription: "Abstract to be announced.",
+
+    learningObjectives: [],
+    details: {
+      cost: "FREE",
+      audience: "Healthcare professionals involved in oncology care",
+      format: "Live webinar with Q&A",
+    },
+  },
+  {
+    id: "chemotherapy-induced-neuropathy",
+    title: "Chemotherapy Induced Neuropathy",
+
+    date: "December 16, 2026",
+    time: "1:00 PM – 2:00 PM EST",
+    speakerIds: ["dr-jj"],
+    ceAccredited: true,
+    registrationLink:
+      "https://attendee.gotowebinar.com/register/7005730108728821593",
+
+    // Abstract and learning objectives were not supplied with the speaker copy.
+    description: "",
+    shortDescription: "Abstract to be announced.",
+
+    learningObjectives: [],
+    details: {
+      cost: "FREE",
+      audience: "Healthcare professionals involved in oncology care",
+      format: "Live webinar with Q&A",
+    },
+  },
+  {
+    id: "liquid-biopsy-breast-cancer",
+    title:
+      "Liquid Biopsy (Circulating Tumor DNA) Testing in Advanced Breast Cancer",
+
+    date: "January 13, 2027",
+    time: "1:00 PM – 2:00 PM EST",
+    speakerIds: ["dr-leanna"],
+    ceAccredited: true,
+    registrationLink:
+      "https://attendee.gotowebinar.com/register/6534968707738585952",
+
+    description:
+      "Breast cancer therapy has been revolutionized by genetic sequencing of tumors to identify cancer-driving mutations and to identify targeted therapies individualized to the cancer-causing mutations. Tumor DNA can shed into blood circulation and since 2014 driving mutations can be discovered in blood samples — thus the term 'liquid biopsy'. In this lecture I will discuss how medical oncologists and naturopathic oncologists utilize circulating tumor DNA testing in blood to determine both standard of care and integrative therapeutic options. I will present several breast cancer cases to demonstrate how ctDNA testing is used to tailor treatments to each patient.",
+    shortDescription:
+      "How ctDNA testing guides standard-of-care and integrative treatment decisions in breast cancer.",
+
+    learningObjectives: [
+      "Understand the difference between hereditary and somatic mutations in cancer",
+      "Understand the role of ctDNA testing in breast cancer medical and naturopathic oncology",
+      "Understand how FABNOs use ctDNA testing to evaluate the efficacy of natural therapies",
+      "Be able to determine that your breast cancer patient is receiving state-of-the-science care",
+    ],
+    details: {
+      cost: "FREE",
+      audience: "Healthcare professionals involved in oncology care",
+      format: "Live webinar with Q&A",
     },
   },
 ];
@@ -379,11 +485,26 @@ export const faqs: FAQ[] = [
   },
 ];
 
-export function getSpeakerByWebinarId(webinarId: string): Speaker | undefined {
+/** All presenters for a webinar, in billing order. */
+export function getSpeakersByWebinarId(webinarId: string): Speaker[] {
   const webinar = webinars.find((w) => w.id === webinarId);
-  if (!webinar) return undefined;
+  if (!webinar) return [];
 
-  return speakers.find((s) => s.id === webinar.speakerId);
+  return webinar.speakerIds
+    .map((id) => speakers.find((s) => s.id === id))
+    .filter((s): s is Speaker => Boolean(s));
+}
+
+/** The lead presenter for a webinar. */
+export function getSpeakerByWebinarId(webinarId: string): Speaker | undefined {
+  return getSpeakersByWebinarId(webinarId)[0];
+}
+
+/** Speakers shown in the homepage hero row, in schedule order. */
+export function getFeaturedSpeakers(): Speaker[] {
+  return webinars
+    .flatMap((w) => getSpeakersByWebinarId(w.id))
+    .filter((s) => s.featuredOnHomepage);
 }
 
 export function getWebinarBySpeakerId(speakerId: string): Webinar | undefined {

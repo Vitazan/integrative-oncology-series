@@ -1,15 +1,17 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { getFeaturedSpeakers } from "@/lib/data";
 
 const RotatingText = () => {
   const phrases = [
-    "Free for healthcare practitioners and students",
-    "Advanced webinar series with CE credits",
-    "Clinically focused webinars for naturopathic doctors",
+    "Free for healthcare practitioners",
+    "Advanced webinar series with CE",
+    "Clinically focused webinars in integrative oncology",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,15 +47,36 @@ const RotatingText = () => {
 };
 
 const HeroBanner = () => {
+  const featuredSpeakers = getFeaturedSpeakers();
+
   return (
     <section className="relative bg-gradient-to-r from-emerald-50 to-gray-50 overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-65">
-        <img
-          src="/herobanner2.jpg"
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/banner.webp"
           alt=""
-          className="w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          preload
+          className="object-cover"
         />
       </div>
+
+      {/* White scrim: heavy behind the copy on the left, clearing to the right
+          so the photo keeps its full colour. Mobile gets an even wash instead,
+          because the text spans the full width there. */}
+      <div
+        className="absolute inset-0 z-[1] bg-white/70 md:hidden"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-0 z-[1] hidden md:block"
+        aria-hidden="true"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.65) 40%, rgba(255,255,255,0.20) 58%, rgba(255,255,255,0.15) 72%, rgba(255,255,255,0.10) 86%, rgba(255,255,255,0) 100%)",
+        }}
+      />
 
       <div className="container relative z-10 py-20 md:py-32">
         <div className="max-w-3xl">
@@ -107,22 +130,25 @@ const HeroBanner = () => {
             transition={{ duration: 0.7, delay: 0.6 }}
           >
             <div className="flex justify-center sm:justify-start -space-x-4 mb-4 sm:mb-0">
-              {[1, 2, 3, 4, 5].map((i) => (
+              {featuredSpeakers.map((speaker, i) => (
                 <motion.img
-                  key={i}
-                  src={`/speakers/speaker${i}.jpg`}
-                  alt={`Speaker ${i}`}
-                  className="w-12 h-12 rounded-full border-2 border-white"
+                  key={speaker.id}
+                  src={speaker.image}
+                  alt={speaker.name}
+                  title={speaker.name}
+                  style={{ objectPosition: speaker.imagePosition }}
+                  className="w-12 h-12 rounded-full border-2 border-white object-cover"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.6 + (i + 1) * 0.1 }}
                 />
               ))}
             </div>
 
             <p className="text-gray-800 font-medium text-sm sm:text-base">
               <span className="font-semibold block sm:inline">
-                5 expert speakers from September 2025 – <br /> February 2026
+                {featuredSpeakers.length} expert speakers from September 2026 –{" "}
+                <br /> January 2027
               </span>
             </p>
           </motion.div>

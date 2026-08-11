@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import WebinarPageClient from "@/components/webinar-page-client";
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = params;
+  const { id } = await params;
   const webinar = webinars.find((w) => w.id === id);
 
   if (!webinar) {
@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function WebinarPage({ params }: { params: { id: string } }) {
-  return <WebinarPageClient id={params.id} />;
+export default async function WebinarPage({ params }: Props) {
+  const { id } = await params;
+  return <WebinarPageClient id={id} />;
 }

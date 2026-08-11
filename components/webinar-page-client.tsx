@@ -1,7 +1,7 @@
 "use client";
 
 import { use, useState } from "react";
-import { webinars, getSpeakerByWebinarId } from "@/lib/data";
+import { webinars, getSpeakersByWebinarId } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export default function WebinarPageClient({ id }: { id: string }) {
   const webinar = webinars.find((w) => w.id === id);
   if (!webinar) notFound();
 
-  const speaker = getSpeakerByWebinarId(webinar.id);
+  const webinarSpeakers = getSpeakersByWebinarId(webinar.id);
   const [tab, setTab] = useState<"webinar" | "speaker">("webinar");
 
   return (
@@ -32,23 +32,42 @@ export default function WebinarPageClient({ id }: { id: string }) {
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
             {webinar.title}
           </h1>
-          <div className="flex flex-wrap gap-6 mb-6 text-black-900">
+          <div className="flex flex-wrap items-center gap-6 mb-6 text-black-900">
             <div className="flex items-center">
               <Calendar className="h-5 w-5 mr-2" /> {webinar.date}
             </div>
             <div className="flex items-center">
               <Clock className="h-5 w-5 mr-2" /> {webinar.time}
             </div>
-          </div>
-          <a href={webinar.registrationLink} target="_blank">
-            <Button
-              size="lg"
-              style={{ backgroundColor: "#90b73e" }}
-              className="bg-[#7d8d5b] hover:opacity-90 text-black"
+            <span
+              className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                webinar.ceAccredited
+                  ? "bg-[#90b73e]/30 text-[#3f5417]"
+                  : "bg-gray-200 text-gray-700"
+              }`}
             >
-              Register Now
+              {webinar.ceAccredited ? "CE accredited" : "Non-CE webinar"}
+            </span>
+          </div>
+          {webinar.registrationLink ? (
+            <a
+              href={webinar.registrationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                style={{ backgroundColor: "#90b73e" }}
+                className="bg-[#7d8d5b] hover:opacity-90 text-black"
+              >
+                Register Now
+              </Button>
+            </a>
+          ) : (
+            <Button size="lg" disabled variant="outline">
+              Registration opening soon
             </Button>
-          </a>
+          )}
         </div>
       </section>
 
@@ -73,7 +92,9 @@ export default function WebinarPageClient({ id }: { id: string }) {
                 : "border-transparent text-gray-500"
             }`}
           >
-            About the Speaker
+            {webinarSpeakers.length > 1
+              ? "About the Speakers"
+              : "About the Speaker"}
           </button>
         </div>
       </div>
@@ -82,9 +103,16 @@ export default function WebinarPageClient({ id }: { id: string }) {
       <section className="container py-12">
         {tab === "webinar" && (
           <div>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              {webinar.description}
-            </p>
+            {webinar.description ? (
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {webinar.description}
+              </p>
+            ) : (
+              <p className="text-gray-500 italic leading-relaxed mb-6">
+                The full abstract and learning objectives for this session will
+                be announced shortly.
+              </p>
+            )}
 
            {webinar.learningObjectives.length > 0 && (
 
@@ -102,35 +130,43 @@ export default function WebinarPageClient({ id }: { id: string }) {
           </div>
         )}
 
-        {tab === "speaker" && speaker && (
-          <section className="bg-white p-6 rounded-xl shadow-md">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-              {/* Speaker Image */}
-              <div className="flex justify-center md:justify-start">
-                <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-emerald-100 shadow-md">
-                  <img
-                    src={speaker.image || "/placeholder.svg"}
-                    alt={speaker.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+        {tab === "speaker" && (
+          <div className="space-y-8">
+            {webinarSpeakers.map((speaker) => (
+              <section
+                key={speaker.id}
+                className="bg-white p-6 rounded-xl shadow-md"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                  {/* Speaker Image */}
+                  <div className="flex justify-center md:justify-start">
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-emerald-100 shadow-md">
+                      <img
+                        src={speaker.image || "/placeholder.svg"}
+                        alt={speaker.name}
+                        style={{ objectPosition: speaker.imagePosition }}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
 
-              {/* Speaker Info */}
-              <div className="md:col-span-2">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-1">
-                  {speaker.name}
-                </h3>
-                <p className="text-emerald-600 font-medium mb-3">
-                  {speaker.title}
-                </p>
-                <div
-                  className="text-gray-700 leading-relaxed space-y-4 [&_a]:text-blue-600 [&_a]:underline [&_a:hover]:text-blue-800"
-                  dangerouslySetInnerHTML={{ __html: speaker.biohtml }}
-                />
-              </div>
-            </div>
-          </section>
+                  {/* Speaker Info */}
+                  <div className="md:col-span-2">
+                    <h3 className="text-2xl font-semibold text-gray-800 mb-1">
+                      {speaker.name}
+                    </h3>
+                    <p className="text-emerald-600 font-medium mb-3">
+                      {speaker.title}
+                    </p>
+                    <div
+                      className="text-gray-700 leading-relaxed space-y-4 [&_a]:text-blue-600 [&_a]:underline [&_a:hover]:text-blue-800"
+                      dangerouslySetInnerHTML={{ __html: speaker.biohtml }}
+                    />
+                  </div>
+                </div>
+              </section>
+            ))}
+          </div>
         )}
       </section>
     </main>
