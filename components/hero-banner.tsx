@@ -51,24 +51,24 @@ const HeroBanner = () => {
 
   return (
     <section className="relative bg-gradient-to-r from-emerald-50 to-gray-50 overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      {/* The photo is ~2.7:1 with the subject on the right. On mobile it sits in
+          a band across the top, anchored right so she stays in frame, and the
+          copy stacks below it. From md up it goes back to a full-bleed
+          background behind the copy. */}
+      <div className="absolute top-0 left-0 right-0 h-56 sm:h-72 md:bottom-0 md:h-auto z-0">
         <Image
           src="/banner.webp"
           alt=""
           fill
           sizes="100vw"
           preload
-          className="object-cover"
+          className="object-cover object-right md:object-center"
         />
       </div>
 
       {/* White scrim: heavy behind the copy on the left, clearing to the right
-          so the photo keeps its full colour. Mobile gets an even wash instead,
-          because the text spans the full width there. */}
-      <div
-        className="absolute inset-0 z-[1] bg-white/70 md:hidden"
-        aria-hidden="true"
-      />
+          so the photo keeps its full colour. Desktop only — on mobile no text
+          overlaps the photo, so a wash there would just mute it. */}
       <div
         className="absolute inset-0 z-[1] hidden md:block"
         aria-hidden="true"
@@ -78,7 +78,7 @@ const HeroBanner = () => {
         }}
       />
 
-      <div className="container relative z-10 py-20 md:py-32">
+      <div className="container relative z-10 pt-64 pb-16 sm:pt-80 sm:pb-20 md:pt-32 md:pb-32">
         <div className="max-w-3xl">
           <motion.h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6"
