@@ -211,23 +211,31 @@ export const speakers: Speaker[] = [
   },
   {
     id: "dr-paul-s",
-    name: "Dr Paul Saunders",
-    title: "ND, PhD",
-    credentials: "ND, PhD",
+    name: "Dr Paul Richard Saunders",
+    title: "PhD, ND, RHOM",
+    credentials: "PhD, ND, RHOM",
     bio: "Dr Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.",
     biohtml: `
-      Dr Saunders is an accomplished professional with dual ND degrees from the
-      <a href="https://www.ccnm.edu" target="_blank">Canadian College of Naturopathic Medicine</a> and the National College in Portland.
-      His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.
+  <p>
+    Dr Saunders is an accomplished professional with <strong>dual ND degrees</strong> from the
+    <a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
+    Canadian College of Naturopathic Medicine</a> and the National College in Portland. His extensive experience spans
+    over 30 years, employing a full range of naturopathic therapies and embracing complex cases.
+  </p>
 
-      He held roles as <strong>Clinic Director</strong> and <strong>Associate Dean</strong> at CCNM, and continues to
-      educate and publish as an <strong>Adjunct Professor</strong> at the
-      <a href="https://www.nuhs.edu" target="_blank">National University of Health Sciences</a>.
+  <p>
+    He held roles as <strong>Clinic Director</strong> and <strong>Associate Dean</strong> at CCNM, and continues to
+    educate and publish as an <strong>Adjunct Professor</strong> at the
+    <a href="https://www.nuhs.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
+    National University of Health Sciences</a>.
+  </p>
 
-      He is involved with <a href="https://www.nih.gov" target="_blank">NIH</a>, and was twice named
-    Ontario Naturopathic Doctor of the Year. He also advised
- Health Canada’s Natural Health Products Directorate.
-    `,
+  <p>
+    He is involved with <a href="https://www.nih.gov" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">NIH</a>,
+    and was twice named <strong>Ontario Naturopathic Doctor of the Year</strong>. He also advised Health Canada’s
+    Natural Health Products Directorate.
+  </p>
+`,
     research: "Botanical and nutraceutical research in integrative oncology",
     webinarId: "botanical-nutraceutical-updates",
     image: "/speakers/speaker2.jpg",
@@ -377,7 +385,7 @@ export const webinars: Webinar[] = [
   },
   {
     id: "botanical-nutraceutical-updates",
-    title: "Botanical and Nutraceuticals Research Updates – Integrative Oncology",
+    title: "Botanical and Nutraceutical Research Updates in Oncology",
 
     date: "November 18, 2026",
     time: "1:00 PM – 2:00 PM EST",
@@ -386,11 +394,18 @@ export const webinars: Webinar[] = [
     registrationLink:
       "https://attendee.gotowebinar.com/register/6252759257244585304",
 
-    // Abstract and learning objectives were not supplied with the speaker copy.
-    description: "",
-    shortDescription: "Abstract to be announced.",
+    description:
+      "Cancer research is ever growing in multiple directions. This presentation will focus on recent botanical or plant findings that could be applied to clinical practice and nutraceutical, diet, and lifestyle factors that may lower the cancer risk or be beneficial during and after treatment.",
+    shortDescription:
+      "Recent botanical, nutraceutical, diet, and lifestyle findings that may lower cancer risk or support patients during and after treatment.",
 
-    learningObjectives: [],
+    learningObjectives: [
+      "Describe the role of the microbiome in the metabolism and activity of botanical medicines",
+      "Explain the evidence linking carrot consumption and cancer risk",
+      "Discuss the emerging evidence on the potential use of bee venom in breast cancer",
+      "Evaluate current findings on vegetarian diets, fasting, and cancer risk",
+      "Explain how disruption of the circadian clock may influence cancer development and progression",
+    ],
     details: {
       cost: "FREE",
       audience: "Healthcare professionals involved in oncology care",
