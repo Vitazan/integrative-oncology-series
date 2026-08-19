@@ -42,8 +42,8 @@ export const speakers: Speaker[] = [
   {
     id: "dr-neil",
     name: "Dr Neil McKinney",
-    title: "BSc, ND (non-practicing)",
-    credentials: "BSc, ND (non-practicing)",
+    title: "BSc, ND",
+    credentials: "BSc, ND",
     bio: "Dr McKinney has a BSc in biosciences from Simon Fraser University, studied kinesiology at the University of Waterloo, and received a Doctor of Naturopathic Medicine from National College of Naturopathic Medicine (1985).",
     biohtml: `
   <p>
