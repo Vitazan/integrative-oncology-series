@@ -414,7 +414,8 @@ export const webinars: Webinar[] = [
   },
   {
     id: "chemotherapy-induced-neuropathy",
-    title: "Chemotherapy Induced Neuropathy",
+    title:
+      "Naturopathic Prevention and Management of Chemotherapy-Induced Neuropathy",
 
     date: "December 16, 2026",
     time: "1:00 PM – 2:00 PM EST",
@@ -423,11 +424,18 @@ export const webinars: Webinar[] = [
     registrationLink:
       "https://attendee.gotowebinar.com/register/7005730108728821593",
 
-    // Abstract and learning objectives were not supplied with the speaker copy.
-    description: "",
-    shortDescription: "Abstract to be announced.",
+    description:
+      "Chemotherapy-induced peripheral neuropathy (CIPN) affects approximately 30% of patients, although the incidence varies depending on the specific treatment regimen. It is most commonly associated with platinum agents, taxanes, vinca alkaloids, and etoposide, but can also occur with non-chemotherapy agents including immunomodulatory drugs (thalidomide, lenalidomide, pomalidomide) and proteasome inhibitors (bortezomib, carfilzomib, ixazomib). The purpose of this seminar will be to discuss naturopathic treatments to prevent and manage CIPN. We will discuss cold therapy, henna, herbal medicines and supplements, such as alpha-lipoic acid, saffron, omega-3 fish oils, turmeric, lion’s mane, benfotiamine and others. We will also discuss red light therapy and topical application of henna.",
+    shortDescription:
+      "Evidence-informed naturopathic strategies to prevent and manage chemotherapy-induced peripheral neuropathy.",
 
-    learningObjectives: [],
+    learningObjectives: [
+      "Describe the incidence, risk factors, and clinical presentation of chemotherapy-induced peripheral neuropathy (CIPN)",
+      "Identify the chemotherapy and targeted therapies most commonly associated with the development of CIPN",
+      "Evaluate the evidence supporting naturopathic interventions for the prevention and management of CIPN, including nutritional supplements, herbal medicines, and topical therapies",
+      "Discuss the mechanisms of action, clinical applications, and safety considerations of integrative therapies such as alpha-lipoic acid, benfotiamine, saffron, turmeric, lion’s mane, cold therapy, red light therapy, and topical henna",
+      "Develop an evidence-informed integrative treatment plan to help prevent or manage CIPN and improve quality of life in patients undergoing cancer treatment",
+    ],
     details: {
       cost: "FREE",
       audience: "Healthcare professionals involved in oncology care",
